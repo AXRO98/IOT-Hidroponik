@@ -1,0 +1,150 @@
+<!-- jQuery -->
+<script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+<!-- Bootstrap -->
+<script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ url_for('static', filename='plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ url_for('static', filename='js/adminlte.js') }}"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="{{ url_for('static', filename='plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/raphael/raphael.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ url_for('static', filename='plugins/chart.js/Chart.min.js') }}"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="{{ url_for('static', filename='js/demo.js') }}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ url_for('static', filename='js/pages/dashboard2.js') }}"></script>
+
+<!-- Customization Script (Control Sidebar) -->
+<script>
+$(document).ready(function() {
+    // Fungsi untuk memuat preferensi dari localStorage
+    function loadSettings() {
+        // Dark Mode
+        let darkMode = localStorage.getItem('darkMode') === 'true';
+        $('#darkModeSwitch').prop('checked', darkMode);
+        if (darkMode) $('body').addClass('dark-mode');
+        else $('body').removeClass('dark-mode');
+
+        // Fixed Sidebar (layout-fixed)
+        let fixedSidebar = localStorage.getItem('fixedSidebar') === 'true';
+        $('#fixedSidebarSwitch').prop('checked', fixedSidebar);
+        if (fixedSidebar) $('body').addClass('layout-fixed');
+        else $('body').removeClass('layout-fixed');
+
+        // Fixed Navbar (layout-navbar-fixed)
+        let fixedNavbar = localStorage.getItem('fixedNavbar') === 'true';
+        $('#fixedNavbarSwitch').prop('checked', fixedNavbar);
+        if (fixedNavbar) $('body').addClass('layout-navbar-fixed');
+        else $('body').removeClass('layout-navbar-fixed');
+
+        // Fixed Footer (layout-footer-fixed)
+        let fixedFooter = localStorage.getItem('fixedFooter') === 'true';
+        $('#fixedFooterSwitch').prop('checked', fixedFooter);
+        if (fixedFooter) $('body').addClass('layout-footer-fixed');
+        else $('body').removeClass('layout-footer-fixed');
+
+        // Sidebar Mini (sidebar-mini)
+        let sidebarMini = localStorage.getItem('sidebarMini') === 'true';
+        $('#sidebarMiniSwitch').prop('checked', sidebarMini);
+        if (sidebarMini) $('body').addClass('sidebar-mini');
+        else $('body').removeClass('sidebar-mini');
+    }
+
+    // Event listener untuk setiap switch
+    $('#darkModeSwitch').change(function() {
+        let checked = $(this).is(':checked');
+        localStorage.setItem('darkMode', checked);
+        if (checked) $('body').addClass('dark-mode');
+        else $('body').removeClass('dark-mode');
+    });
+
+    $('#fixedSidebarSwitch').change(function() {
+        let checked = $(this).is(':checked');
+        localStorage.setItem('fixedSidebar', checked);
+        if (checked) $('body').addClass('layout-fixed');
+        else $('body').removeClass('layout-fixed');
+    });
+
+    $('#fixedNavbarSwitch').change(function() {
+        let checked = $(this).is(':checked');
+        localStorage.setItem('fixedNavbar', checked);
+        if (checked) $('body').addClass('layout-navbar-fixed');
+        else $('body').removeClass('layout-navbar-fixed');
+    });
+
+    $('#fixedFooterSwitch').change(function() {
+        let checked = $(this).is(':checked');
+        localStorage.setItem('fixedFooter', checked);
+        if (checked) $('body').addClass('layout-footer-fixed');
+        else $('body').removeClass('layout-footer-fixed');
+    });
+
+    $('#sidebarMiniSwitch').change(function() {
+        let checked = $(this).is(':checked');
+        localStorage.setItem('sidebarMini', checked);
+        if (checked) $('body').addClass('sidebar-mini');
+        else $('body').removeClass('sidebar-mini');
+    });
+
+    // Reset ke default
+    $('#resetCustomize').click(function() {
+        localStorage.removeItem('darkMode');
+        localStorage.removeItem('fixedSidebar');
+        localStorage.removeItem('fixedNavbar');
+        localStorage.removeItem('fixedFooter');
+        localStorage.removeItem('sidebarMini');
+        loadSettings(); // reload setting ke default (semua false)
+    });
+
+    // Panggil loadSettings saat halaman dimuat
+    loadSettings();
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Ambil semua link di sidebar
+    const links = document.querySelectorAll('.main-sidebar .nav-sidebar .nav-link');
+    const currentUrl = window.location.href.split(/[?#]/)[0]; // URL tanpa query string
+
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href === '') return; // Abaikan link kosong
+
+        // Buat URL absolut untuk perbandingan
+        const fullLinkHref = new URL(href, window.location.origin).href.split(/[?#]/)[0];
+
+        if (fullLinkHref === currentUrl) {
+            // Hapus class active dari semua link
+            links.forEach(l => l.classList.remove('active'));
+            
+            // Tambah class active ke link yang sesuai
+            link.classList.add('active');
+            
+            // Buka treeview parent jika ada
+            const parentLi = link.closest('li.nav-item');
+            if (parentLi) {
+                // Cek apakah ini bagian dari treeview
+                const parentTreeview = parentLi.closest('.nav-treeview');
+                if (parentTreeview) {
+                    // Buka parent menu (treeview)
+                    const parentNavItem = parentTreeview.closest('li.nav-item');
+                    if (parentNavItem) {
+                        parentNavItem.classList.add('menu-open');
+                        const parentLink = parentNavItem.querySelector('> .nav-link');
+                        if (parentLink) {
+                            parentLink.classList.add('active');
+                        }
+                    }
+                }
+            }
+        }
+    });
+});
+</script>

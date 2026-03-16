@@ -20,9 +20,9 @@ apps/
  └── __init__.py  (file ini)
 """
 
+import os
 from flask import Flask
 from importlib import import_module
-
 
 def register_blueprints(app: Flask):
     """
@@ -45,6 +45,7 @@ def register_blueprints(app: Flask):
         app.register_blueprint(module.blueprint)
 
 
+
 def create_app(config):
     """
     Application Factory.
@@ -61,12 +62,27 @@ def create_app(config):
         Instance aplikasi Flask yang sudah siap digunakan.
     """
 
-    app = Flask(__name__)
+    # Contextual
+    static_prefix = '/static'
+    templates_dir = os.path.dirname(config.BASE_DIR)
 
-    # Load konfigurasi aplikasi
+    TEMPLATES_FOLDER = os.path.join(templates_dir, 'templates')
+    STATIC_FOLDER = os.path.join(templates_dir, 'static')
+
+    print(' > TEMPLATES_FOLDER: ' + TEMPLATES_FOLDER)
+    print(' > STATIC_FOLDER:    ' + STATIC_FOLDER)
+
+    app = Flask(
+        __name__,
+        static_url_path=static_prefix,
+        template_folder=TEMPLATES_FOLDER,
+        static_folder=STATIC_FOLDER
+    )
+
+    # Load konfigurasi
     app.config.from_object(config)
 
-    # Register semua blueprint
+    # Register blueprint
     register_blueprints(app)
 
     return app

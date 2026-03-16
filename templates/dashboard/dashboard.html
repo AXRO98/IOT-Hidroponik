@@ -1,0 +1,280 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Dashboard Hidroponik IoT{% endblock %}
+
+{% block content %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Dashboard Hidroponik</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Hidroponik</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1"><i class="fas fa-flask"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">pH Air</span>
+                        <span class="info-box-number">6.8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-success elevation-1"><i class="fas fa-tint"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">TDS / EC</span>
+                        <span class="info-box-number">850 ppm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-thermometer-half"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Suhu Air</span>
+                        <span class="info-box-number">25.5 °C</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-wind"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Kelembapan Udara</span>
+                        <span class="info-box-number">72%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Row for charts or additional info -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Grafik pH Air (24 Jam)</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="phChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Grafik TDS/EC (24 Jam)</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="tdsChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Grafik Suhu Air (24 Jam)</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="suhuChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Grafik Kelembapan Udara (24 Jam)</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="kelembapanChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabel data terbaru atau log -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Riwayat Pembacaan Sensor</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>Waktu</th>
+                                    <th>pH</th>
+                                    <th>TDS (ppm)</th>
+                                    <th>Suhu (°C)</th>
+                                    <th>Kelembapan (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025-03-16 08:00</td>
+                                    <td>6.8</td>
+                                    <td>850</td>
+                                    <td>25.5</td>
+                                    <td>72</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-03-16 07:00</td>
+                                    <td>6.7</td>
+                                    <td>845</td>
+                                    <td>25.2</td>
+                                    <td>73</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-03-16 06:00</td>
+                                    <td>6.8</td>
+                                    <td>852</td>
+                                    <td>25.0</td>
+                                    <td>74</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-03-16 05:00</td>
+                                    <td>6.9</td>
+                                    <td>860</td>
+                                    <td>24.8</td>
+                                    <td>75</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+$(document).ready(function() {
+    // Data contoh untuk grafik (bisa diganti dengan data real dari backend)
+    var labels = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
+    
+    // Data pH
+    var phData = [6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7];
+    // Data TDS
+    var tdsData = [850, 845, 852, 860, 855, 848, 850, 845, 850, 855, 860, 858, 852, 849, 850, 847, 851, 853, 850, 846, 849, 852, 850, 848];
+    // Data Suhu
+    var suhuData = [25.5, 25.2, 25.0, 24.8, 24.9, 25.1, 25.3, 25.5, 25.5, 25.6, 25.7, 25.8, 25.8, 25.7, 25.6, 25.5, 25.4, 25.3, 25.2, 25.1, 25.0, 24.9, 24.8, 24.7];
+    // Data Kelembapan
+    var humData = [72, 73, 74, 75, 74, 73, 72, 72, 72, 71, 70, 69, 68, 68, 69, 70, 71, 72, 73, 74, 75, 75, 74, 73];
+
+    // Fungsi untuk membuat grafik
+    function createChart(ctx, label, data, backgroundColor, borderColor) {
+        return new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: label,
+                    data: data,
+                    backgroundColor: backgroundColor,
+                    borderColor: borderColor,
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4,
+                    pointRadius: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
+
+    // Inisialisasi grafik
+    createChart(
+        document.getElementById('phChart').getContext('2d'),
+        'pH Air',
+        phData,
+        'rgba(23, 162, 184, 0.2)',
+        'rgba(23, 162, 184, 1)'
+    );
+
+    createChart(
+        document.getElementById('tdsChart').getContext('2d'),
+        'TDS (ppm)',
+        tdsData,
+        'rgba(40, 167, 69, 0.2)',
+        'rgba(40, 167, 69, 1)'
+    );
+
+    createChart(
+        document.getElementById('suhuChart').getContext('2d'),
+        'Suhu (°C)',
+        suhuData,
+        'rgba(255, 193, 7, 0.2)',
+        'rgba(255, 193, 7, 1)'
+    );
+
+    createChart(
+        document.getElementById('kelembapanChart').getContext('2d'),
+        'Kelembapan (%)',
+        humData,
+        'rgba(220, 53, 69, 0.2)',
+        'rgba(220, 53, 69, 1)'
+    );
+});
+</script>
+{% endblock %}

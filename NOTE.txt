@@ -1,0 +1,9 @@
+Struktur Website
+
+PATH        Fungsi
+/           Kalau belum login auto direct ke /login kalau sudah ke /dashboard
+/login      Login Website
+/dashboard  Dashboard Realtime sensor-sensor
+
+UPDATE
+16-03-2026: Membuat web dashboard dan Membuat costomize sidebar
