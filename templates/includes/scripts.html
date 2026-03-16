@@ -18,8 +18,6 @@
 
 <!-- AdminLTE for demo purposes -->
 <script src="{{ url_for('static', filename='js/demo.js') }}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ url_for('static', filename='js/pages/dashboard2.js') }}"></script>
 
 <!-- Customization Script (Control Sidebar) -->
 <script>
@@ -147,4 +145,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var preloader = document.getElementById('preloader');
+        var mainContent = document.getElementById('main-content');
+
+        // Total durasi animasi preloader (2 detik animasi + 0.5 detik delay teks)
+        var animationDuration = 2500; // 2.5 detik
+        
+        setTimeout(function() {
+            // Fade out preloader
+            preloader.style.opacity = '0';
+            // Fade in konten utama
+            mainContent.style.opacity = '1';
+            // Setelah transisi fade preloader selesai, sembunyikan dari tampilan
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 500); // sama dengan durasi transition opacity preloader
+        }, animationDuration);
+    });
 </script>

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'ArialBlack';
+    src: url('../fonts/Ariblk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #343a40;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.preloader_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.preloader-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.preloader_robotik {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotateBox 2s forwards;
+    background-color: #000;
+    border-radius: 35%;
+    box-shadow: 0px 10px 10px #323232;
+}
+
+.image_animation {
+    position: absolute;
+    width: 0;
+    height: 0;
+    animation: scaleLogo 2s forwards;
+}
+
+.text_robotik {
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: 0;
+    animation: appearText 0.5s forwards 1.5s;
+    color: white;
+    font-family: 'ArialBlack', sans-serif;
+}
+
+/* Animasi rotate box */
+@keyframes rotateBox {
+    0% {
+        transform: rotate(-90deg) scale(0);
+    }
+    75% {
+        transform: rotate(0deg) scale(1);
+        width: 175px;
+        height: 175px;
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animasi logo */
+@keyframes scaleLogo {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    15% {
+        width: 0;
+        height: 0;
+    }
+    75% {
+        width: 120px;
+        height: 120px;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Animasi teks */
+@keyframes appearText {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main content */
+#main-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Wrapper full height */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
