@@ -1,5 +1,5 @@
 Website Dashboard IOT Hidroponik
-Version: v0.1.1-beta
+Version: v0.1.2-beta
 
 Struktur Website
 PATH        Fungsi
@@ -9,10 +9,10 @@ PATH        Fungsi
 /settings   Untuk setting di nilai berapa akan otomatis menambahkan vitamin
 
 Roadmap
-v0.1.0-beta
+v0.1.*-beta
 - Page Dashboard
 - Auto acvtive link
-- Costomize sidebar
+- Costomize sidebar auto save localstorage
 - Security: CSRF Protection
 - Security: Secure Headers
 - Access Logging: Log each request to console
@@ -21,10 +21,11 @@ v0.1.0-beta
 - Logo belum ada
 - beberapa image harus di hapus karna tidak ada
 
-v0.2.0-beta
+v0.2.*-beta
 - Database nosql
 - Login
 
 UPDATE
 v0.1.0-beta 16-03-2026 23:10: Membuat web dashboard dan Membuat costomize sidebar
 v0.1.1-beta 17-03-2026 02:40: Animasi preloader
+v0.1.2-beta 17-03-2026 04:00: Customize Sidebar di buat agar bisa simpan localstorage settingannya
