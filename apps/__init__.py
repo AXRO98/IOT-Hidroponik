@@ -21,8 +21,11 @@ apps/
 """
 
 import os
-from flask import Flask
+from flask import Flask, redirect
 from importlib import import_module
+from flask_login import LoginManager
+
+login_manager = LoginManager()
 
 def register_blueprints(app: Flask):
     """
@@ -81,7 +84,14 @@ def create_app(config):
     # Load konfigurasi
     app.config.from_object(config)
 
+    login_manager.login_view = 'authentication_blueprint.login'
+    login_manager.init_app(app)
+
     # Register blueprint
     register_blueprints(app)
+
+    @login_manager.unauthorized_handler
+    def unauthorized():
+        return redirect('/login')
 
     return app

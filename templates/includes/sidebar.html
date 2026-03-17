@@ -12,7 +12,7 @@
                 <img src="{{ url_for('static', filename='img/user.png') }}"class="elevation-2" style="width:35px; height:35px; border-radius:50%; object-fit:cover;">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Keyfin A. Suratman</a>
+                <a href="#" class="d-block">{{ current_user.username }}</a>
             </div>
         </div>
 
