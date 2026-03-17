@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(145deg, #a8e6cf 0%, #dcedc8 80%, #f8f8f8 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Falling leaves background */
+        .nature-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .floating-leaf {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: radial-gradient(ellipse at center, #4caf50, #2e7d32);
+            border-radius: 0 100% 0 100%;
+            opacity: 0.5;
+            transform: rotate(45deg);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            animation: fall linear infinite;
+            top: -10%;
+        }
+
+        .leaf-1 { left: 10%; width: 28px; height: 28px; opacity: 0.5; animation-duration: 14s; animation-delay: 0s; }
+        .leaf-2 { left: 30%; width: 18px; height: 18px; opacity: 0.45; animation-duration: 11s; animation-delay: 2s; }
+        .leaf-3 { left: 55%; width: 22px; height: 22px; opacity: 0.6; animation-duration: 16s; animation-delay: 1s; }
+        .leaf-4 { left: 80%; width: 20px; height: 20px; opacity: 0.4; animation-duration: 12s; animation-delay: 3s; }
+        .leaf-5 { left: 70%; width: 16px; height: 16px; opacity: 0.5; animation-duration: 13s; animation-delay: 5s; }
+        .leaf-6 { left: 45%; width: 26px; height: 26px; opacity: 0.35; animation-duration: 18s; animation-delay: 0.5s; }
+
+        @keyframes fall {
+            0% { top: -10%; transform: rotate(45deg) translateX(0); opacity: 0.5; }
+            20% { transform: rotate(55deg) translateX(10px); }
+            40% { transform: rotate(35deg) translateX(-10px); }
+            60% { transform: rotate(65deg) translateX(15px); }
+            80% { transform: rotate(25deg) translateX(-15px); opacity: 0.5; }
+            100% { top: 110%; transform: rotate(45deg) translateX(0); opacity: 0.3; }
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 440px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .wellness-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border: 1px solid rgba(76, 175, 80, 0.25);
+            border-radius: 40px;
+            padding: 48px 40px;
+            box-shadow: 0 30px 50px -20px rgba(0, 50, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        @keyframes organicFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .mindful-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .zen-logo {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e7d32;
+        }
+
+        .zen-logo svg {
+            position: relative;
+            z-index: 2;
+            animation: zenBreath 4s ease-in-out infinite;
+            filter: drop-shadow(0 4px 6px rgba(46, 125, 50, 0.2));
+        }
+
+        @keyframes zenBreath {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .zen-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: zenGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes zenGlow {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .mindful-header h1 {
+            color: #1b5e20;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .mindful-header p {
+            color: #4caf50;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .organic-field {
+            position: relative;
+            margin-bottom: 28px;
+        }
+
+        .field-nature {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            border: 1.5px solid #c8e6c9;
+            border-radius: 24px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .organic-field input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 18px 56px 18px 20px;
+            color: #1e3a2e;
+            font-size: 16px;
+            font-weight: 500;
+            outline: none;
+            position: relative;
+            z-index: 2;
+            font-family: inherit;
+        }
+
+        .organic-field input::placeholder {
+            color: transparent;
+        }
+
+        .organic-field label {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #81a985;
+            font-size: 16px;
+            font-weight: 400;
+            pointer-events: none;
+            transition: all 0.2s ease;
+            z-index: 3;
+            background: white;
+            padding: 0 8px;
+            border-radius: 12px;
+        }
+
+        .organic-field input:focus + label,
+        .organic-field input:not(:placeholder-shown) + label {
+            top: 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: #2e7d32;
+            transform: translateY(-50%);
+        }
+
+        .organic-field input:focus ~ .field-nature {
+            border-color: #4caf50;
+            border-width: 2px;
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.15);
+        }
+
+        .growth-indicator {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            z-index: 4;
+        }
+
+        .leaf-sprout {
+            width: 100%;
+            height: 100%;
+            background: #4caf50;
+            border-radius: 0 100% 0 100%;
+            opacity: 0;
+            transform: scale(0) rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .organic-field input:focus ~ .growth-indicator .leaf-sprout,
+        .organic-field input:valid ~ .growth-indicator .leaf-sprout {
+            opacity: 1;
+            transform: scale(1) rotate(45deg);
+        }
+
+        /* Error state with icon */
+        .organic-field.error .field-nature {
+            border-color: #ff6b6b;
+            background: #fff5f5;
+        }
+
+        .organic-field.error label {
+            color: #e53e3e;
+        }
+
+        input.error {
+            border: 1px solid red !important;
+            background-color: #ffe6e6 !important;
+        }
+
+        .error-message {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: -37px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #e53e3e;
+            opacity: 0;
+            transform: translateY(-5px);
+            transition: all 0.2s ease;
+            min-height: 50px;
+        }
+
+        .error-message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .error-message svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+        }
+
+        /* Password toggle */
+        .nature-toggle {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #81a985;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nature-toggle:hover {
+            background: rgba(76, 175, 80, 0.1);
+            color: #2e7d32;
+        }
+
+        .eye-hidden {
+            display: none;
+        }
+
+        .nature-toggle.toggle-visible .eye-visible {
+            display: none;
+        }
+
+        .nature-toggle.toggle-visible .eye-hidden {
+            display: block;
+        }
+
+        .mindful-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 24px 0 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .zen-checkbox {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .zen-checkbox input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkbox-leaf {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .leaf-shape {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border: 2px solid #c8e6c9;
+            border-radius: 0 100% 0 100%;
+            transform: rotate(45deg);
+            transition: all 0.2s ease;
+            position: absolute;
+        }
+
+        .checkbox-leaf svg {
+            color: transparent;
+            transition: color 0.2s ease;
+            position: relative;
+            z-index: 1;
+            transform: rotate(-45deg);
+            width: 12px;
+            height: 12px;
+        }
+
+        .zen-checkbox input[type="checkbox"]:checked + .checkbox-leaf .leaf-shape {
+            background: #4caf50;
+            border-color: #4caf50;
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+        }
+
+        .zen-checkbox input[type="checkbox"]:checked + .checkbox-leaf svg {
+            color: white;
+        }
+
+        .healing-link {
+            color: #4caf50;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .healing-link:hover {
+            color: #1b5e20;
+            border-bottom-color: #1b5e20;
+        }
+
+        .harmony-button {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 32px;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-earth {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(145deg, #4caf50, #2e7d32);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px -5px rgba(46, 125, 50, 0.4);
+        }
+
+        .harmony-button:hover .button-earth {
+            background: linear-gradient(145deg, #43a047, #2e7d32);
+            transform: scale(1.02);
+            box-shadow: 0 15px 25px -5px rgba(46, 125, 50, 0.5);
+        }
+
+        .harmony-button:active .button-earth {
+            transform: scale(0.98);
+        }
+
+        .button-text {
+            position: relative;
+            z-index: 2;
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+
+        .button-growth {
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            gap: 6px;
+        }
+
+        .growing-circle {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            animation: organicGrow 1.5s ease-in-out infinite;
+        }
+
+        .circle-2 { animation-delay: 0.2s; }
+        .circle-3 { animation-delay: 0.4s; }
+
+        @keyframes organicGrow {
+            0%, 80%, 100% { transform: scale(0.8); opacity: 0.6; }
+            40% { transform: scale(1.2); opacity: 1; }
+        }
+
+        .harmony-button.loading .button-text {
+            opacity: 0;
+        }
+
+        .harmony-button.loading .button-growth {
+            opacity: 1;
+        }
+
+        .harmony-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .balance-divider {
+            display: flex;
+            align-items: center;
+            margin: 24px 0;
+            gap: 16px;
+        }
+
+        .divider-branch {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.4), transparent);
+        }
+
+        .divider-center {
+            color: #81c784;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .natural-social {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .earth-social {
+            flex: 1;
+            background: white;
+            border: 1px solid #c8e6c9;
+            border-radius: 24px;
+            padding: 12px 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            color: #2e7d32;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+        }
+
+        .earth-social:hover {
+            background: white;
+            border-color: #4caf50;
+            box-shadow: 0 6px 12px rgba(76, 175, 80, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .earth-social svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .nurture-signup {
+            text-align: center;
+            font-size: 14px;
+            color: #558b2f;
+        }
+
+        .growth-link {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .growth-link:hover {
+            border-bottom-color: #2e7d32;
+        }
+
+        @media (max-width: 480px) {
+            .wellness-card {
+                padding: 36px 24px;
+            }
+            .natural-social {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nature-background">
+        <div class="floating-leaf leaf-1"></div>
+        <div class="floating-leaf leaf-2"></div>
+        <div class="floating-leaf leaf-3"></div>
+        <div class="floating-leaf leaf-4"></div>
+        <div class="floating-leaf leaf-5"></div>
+        <div class="floating-leaf leaf-6"></div>
+    </div>
+
+    <div class="login-container">
+        <div class="wellness-card">
+            
+            <div class="mindful-header">
+                <div class="zen-logo">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                        <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
+                        <circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.8"/>
+                        <circle cx="28" cy="28" r="10" fill="currentColor" opacity="0.9"/>
+                        <path d="M28 18v20M18 28h20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <div class="zen-glow"></div>
+                </div>
+                <h1>LOGIN</h1>
+                <p>Dashboard IOT Hidroponik</p>
+            </div>
+            
+            <form class="harmony-form" id="loginForm" method="POST" action="/login" novalidate>
+                <div class="organic-field" id="emailField">
+                    <div class="field-nature"></div>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
+                    <label for="email">Email Address</label>
+                    <div class="growth-indicator">
+                        <div class="leaf-sprout"></div>
+                    </div>
+                </div>
+                <div class="error-message" id="emailError">
+                    <svg viewBox="0 0 24 24"><path d="M12 8v4m0 4h.01"/><circle cx="12" cy="12" r="10"/></svg>
+                    <span>Error user</span>
+                </div>
+
+                <div class="organic-field" id="passwordField">
+                    <div class="field-nature"></div>
+                    <input type="password" id="password" name="password" required autocomplete="current-password" placeholder=" ">
+                    <label for="password">Password</label>
+                    <button type="button" class="nature-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                        <svg class="eye-visible" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 4c-4 0-7 3-8 6 1 3 4 6 8 6s7-3 8-6c-1-3-4-6-8-6zm0 10a4 4 0 110-8 4 4 0 010 8zm0-6a2 2 0 100 4 2 2 0 000-4z" fill="currentColor"/>
+                        </svg>
+                        <svg class="eye-hidden" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3 3l14 14M8.5 8.5a2 2 0 002.83 2.83m-.83-4.83a4 4 0 014 4M10 6C6 6 3 9 2 12c.5 1.5 2 3.5 4 4.5M10 14c4 0 7-3 8-6-.5-1.5-2-3.5-4-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="growth-indicator">
+                        <div class="leaf-sprout"></div>
+                    </div>
+                </div>
+                <div class="error-message" id="passwordError">
+                    <svg viewBox="0 0 24 24"><path d="M12 8v4m0 4h.01"/><circle cx="12" cy="12" r="10"/></svg>
+                    <span>Error pswd</span>
+                </div>
+
+                <div class="mindful-options">
+                    <label class="zen-checkbox">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkbox-leaf">
+                            <div class="leaf-shape"></div>
+                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="checkbox-text">Keep me centered</span>
+                    </label>
+                    <a href="#" class="healing-link">Restore access</a>
+                </div>
+
+                <button type="submit" class="harmony-button" id="submitButton">
+                    <div class="button-earth"></div>
+                    <span class="button-text">Enter Sanctuary</span>
+                    <div class="button-growth">
+                        <div class="growing-circle circle-1"></div>
+                        <div class="growing-circle circle-2"></div>
+                        <div class="growing-circle circle-3"></div>
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        class EcoWellnessLoginForm {
+            constructor() {
+                this.form = document.getElementById('loginForm');
+                this.emailInput = document.getElementById('email');
+                this.passwordInput = document.getElementById('password');
+                this.passwordToggle = document.getElementById('passwordToggle');
+                this.submitButton = document.getElementById('submitButton');
+                this.socialButtons = document.querySelectorAll('.earth-social');
+                this.emailError = document.getElementById('emailError');
+                this.passwordError = document.getElementById('passwordError');
+                
+                this.init();
+            }
+            
+            init() {
+                this.bindEvents();
+                this.setupPasswordToggle();
+            }
+            
+            bindEvents() {
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                this.emailInput.addEventListener('blur', () => this.validateField('email'));
+                this.passwordInput.addEventListener('blur', () => this.validateField('password'));
+                this.emailInput.addEventListener('input', () => this.clearFieldError('email'));
+                this.passwordInput.addEventListener('input', () => this.clearFieldError('password'));
+                
+                this.emailInput.setAttribute('placeholder', ' ');
+                this.passwordInput.setAttribute('placeholder', ' ');
+            }
+            
+            setupPasswordToggle() {
+                this.passwordToggle.addEventListener('click', () => {
+                    const type = this.passwordInput.type === 'password' ? 'text' : 'password';
+                    this.passwordInput.type = type;
+                    this.passwordToggle.classList.toggle('toggle-visible', type === 'text');
+                });
+            }
+            
+            validateField(field) {
+                const value = field === 'email' ? this.emailInput.value.trim() : this.passwordInput.value;
+                const fieldElement = document.getElementById(field);
+                const organicField = fieldElement.closest('.organic-field');
+                const errorElement = field === 'email' ? this.emailError : this.passwordError;
+                const errorSpan = errorElement.querySelector('span');
+                
+                if (!value) {
+                    organicField.classList.add('error');
+                    errorSpan.textContent = field === 'email' ? 'Email is required' : 'Password is required';
+                    errorElement.classList.add('show');
+                    return false;
+                }
+                
+                if (field === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        organicField.classList.add('error');
+                        errorSpan.textContent = 'Please enter a valid email';
+                        errorElement.classList.add('show');
+                        return false;
+                    }
+                }
+                
+                if (field === 'password' && value.length < 6) {
+                    organicField.classList.add('error');
+                    errorSpan.textContent = 'Password must be at least 6 characters';
+                    errorElement.classList.add('show');
+                    return false;
+                }
+                
+                this.clearFieldError(field);
+                return true;
+            }
+            
+            clearFieldError(field) {
+                const fieldElement = document.getElementById(field);
+                const organicField = fieldElement.closest('.organic-field');
+                const errorElement = field === 'email' ? this.emailError : this.passwordError;
+                
+                organicField.classList.remove('error');
+                errorElement.classList.remove('show');
+            }
+            
+            async handleSubmit(e) {
+                e.preventDefault();
+                
+                const isEmailValid = this.validateField('email');
+                const isPasswordValid = this.validateField('password');
+                
+                if (!isEmailValid || !isPasswordValid) {
+                    return;
+                }
+                
+                this.setLoading(true);
+
+                const formData = new FormData(this.form);
+
+                try {
+                    const response = await fetch('/login', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        window.location.href = "/dashboard";
+                    } else {
+                        this.showError(result.message);
+                    }
+
+                } catch (error) {
+                    this.showError("Server error");
+                }
+
+                this.setLoading(false);
+            }
+                        
+            async handleSocialLogin(provider, button) {
+                const originalHTML = button.innerHTML;
+                button.style.pointerEvents = 'none';
+                button.style.opacity = '0.7';
+                
+                const loadingHTML = `
+                    <div style="display: flex; gap: 4px; align-items: center;">
+                        <div style="width: 6px; height: 6px; background: #4caf50; border-radius: 50%; animation: organicGrow 1.5s ease-in-out infinite;"></div>
+                        <div style="width: 6px; height: 6px; background: #4caf50; border-radius: 50%; animation: organicGrow 1.5s ease-in-out infinite; animation-delay: 0.2s;"></div>
+                        <div style="width: 6px; height: 6px; background: #4caf50; border-radius: 50%; animation: organicGrow 1.5s ease-in-out infinite; animation-delay: 0.4s;"></div>
+                    </div>
+                    <span>Connecting...</span>
+                `;
+                
+                button.innerHTML = loadingHTML;
+                
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                console.log(`Connected with ${provider}`);
+                
+                button.style.pointerEvents = 'auto';
+                button.style.opacity = '1';
+                button.innerHTML = originalHTML;
+            }
+            
+            setLoading(loading) {
+                this.submitButton.classList.toggle('loading', loading);
+                this.submitButton.disabled = loading;
+                
+                this.socialButtons.forEach(button => {
+                    button.style.pointerEvents = loading ? 'none' : 'auto';
+                    button.style.opacity = loading ? '0.5' : '1';
+                });
+            }
+
+            showError(message) {
+                this.passwordError.classList.add('show');
+                this.passwordError.querySelector('span').textContent = message;
+
+                const emailField = document.getElementById('emailField');
+                const passwordField = document.getElementById('passwordField');
+
+                emailField.classList.add('error');
+                passwordField.classList.add('error');
+
+                this.emailInput.classList.add('error');
+                this.passwordInput.classList.add('error');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new EcoWellnessLoginForm();
+        });
+    </script>
+</body>
+</html>

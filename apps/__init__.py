@@ -64,10 +64,9 @@ def create_app(config):
 
     # Contextual
     static_prefix = '/static'
-    templates_dir = os.path.dirname(config.BASE_DIR)
 
-    TEMPLATES_FOLDER = os.path.join(templates_dir, 'templates')
-    STATIC_FOLDER = os.path.join(templates_dir, 'static')
+    TEMPLATES_FOLDER = os.path.join(config.BASE_DIR, 'templates')
+    STATIC_FOLDER = os.path.join(config.BASE_DIR, 'static')
 
     print(' > TEMPLATES_FOLDER: ' + TEMPLATES_FOLDER)
     print(' > STATIC_FOLDER:    ' + STATIC_FOLDER)

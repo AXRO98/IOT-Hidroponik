@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Login | Forgot Password</title>
+  <!-- Google Fonts untuk tampilan modern -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome untuk ikon (opsional, menambah kesan modern) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #343a40; /* warna background sesuai permintaan */
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 420px;
+      padding: 2.5rem 2rem;
+      transition: all 0.3s ease;
+    }
+
+    /* Kontainer form dengan toggle */
+    .form-container {
+      position: relative;
+    }
+
+    .form {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .form.active {
+      display: block;
+      opacity: 1;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1e1e1e;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #6c757d;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #495057;
+      margin-bottom: 0.4rem;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrapper i {
+      position: absolute;
+      left: 16px;
+      color: #adb5bd;
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      padding: 0.9rem 1rem 0.9rem 3rem;
+      border: 1.5px solid #e9ecef;
+      border-radius: 16px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .input-wrapper input:focus {
+      border-color: #343a40;
+      background-color: #ffffff;
+      box-shadow: 0 0 0 4px rgba(52, 58, 64, 0.1);
+    }
+
+    .input-wrapper input::placeholder {
+      color: #ced4da;
+      font-weight: 400;
+    }
+
+    /* lupa password dan remember me row */
+    .form-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #495057;
+    }
+
+    .remember-me input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #343a40;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .forgot-link {
+      color: #343a40;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .forgot-link:hover {
+      border-bottom-color: #343a40;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: #343a40;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+      box-shadow: 0 8px 18px rgba(52, 58, 64, 0.2);
+      margin-bottom: 1.5rem;
+    }
+
+    .btn:hover {
+      background-color: #23272b;
+      box-shadow: 0 12px 22px rgba(52, 58, 64, 0.3);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #343a40;
+      box-shadow: none;
+      border: 1.5px solid #dee2e6;
+      margin-top: 0.8rem;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f1f3f5;
+      box-shadow: none;
+    }
+
+    .info-text {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #868e96;
+    }
+
+    .back-to-login {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .back-link {
+      color: #343a40;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      cursor: pointer;
+    }
+
+    .back-link:hover {
+      border-bottom-color: #343a40;
+    }
+
+    /* pesan sukses sederhana untuk demo */
+    .demo-message {
+      background-color: #d4edda;
+      color: #155724;
+      border-radius: 12px;
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      border: 1px solid #c3e6cb;
+    }
+
+    /* footer kecil */
+    .footer-note {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #adb5bd;
+    }
+
+    /* responsif */
+    @media (max-width: 480px) {
+      .card {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="form-container">
+      <!-- FORM LOGIN (active secara default) -->
+      <div id="loginForm" class="form active">
+        <h2>Selamat datang</h2>
+        <div class="subtitle">Silakan masuk ke akun Anda</div>
+
+        <!-- Demo notifikasi (hanya untuk interaksi) -->
+        <!-- <div class="demo-message" id="loginMessage" style="display: none;">Login demo (tidak ada backend)</div> -->
+
+        <form id="loginFormElement" onsubmit="handleLogin(event)">
+          <div class="input-group">
+            <label for="email">Email atau username</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" placeholder="nama@email.com" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Kata sandi</label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox"> Ingat saya
+            </label>
+            <a class="forgot-link" onclick="showForgotPassword()">Lupa password?</a>
+          </div>
+
+          <button type="submit" class="btn">Masuk</button>
+          
+          <!-- opsional: link daftar, tapi fokus ke lupa password -->
+          <div class="info-text">
+            Belum punya akun? <a href="#" style="color:#343a40; font-weight:600; text-decoration:none;">Hubungi admin</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- FORM FORGOT PASSWORD (tersembunyi awalnya) -->
+      <div id="forgotForm" class="form">
+        <h2>Lupa password?</h2>
+        <div class="subtitle">Tenang, kami akan bantu reset</div>
+
+        <!-- Notifikasi demo -->
+        <div id="forgotDemoMessage" class="demo-message" style="display: none;">Instruksi reset telah dikirim (demo)</div>
+
+        <form id="forgotFormElement" onsubmit="handleForgot(event)">
+          <div class="input-group">
+            <label for="resetEmail">Email terdaftar</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="resetEmail" placeholder="anda@email.com" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Kirim instruksi reset</button>
+          
+          <div class="back-to-login">
+            <a class="back-link" onclick="showLogin()">Kembali ke login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer kecil untuk estetika -->
+    <div class="footer-note">
+      <i class="far fa-circle" style="font-size: 6px; vertical-align: middle;"></i>  portal modern  <i class="far fa-circle" style="font-size: 6px; vertical-align: middle;"></i>
+    </div>
+  </div>
+
+  <script>
+    // Fungsi untuk menampilkan form forgot password
+    function showForgotPassword() {
+      document.getElementById('loginForm').classList.remove('active');
+      document.getElementById('forgotForm').classList.add('active');
+    }
+
+    // Fungsi untuk kembali ke form login
+    function showLogin() {
+      document.getElementById('forgotForm').classList.remove('active');
+      document.getElementById('loginForm').classList.add('active');
+    }
+
+    // Handler login (hanya demo, tidak ada aksi backend)
+    function handleLogin(event) {
+      event.preventDefault(); // Mencegah reload
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      // Validasi sederhana
+      if (email && password) {
+        // Tampilkan pesan sementara (modern: bisa pakai alert atau toast sederhana)
+        alert(`Demo: Login dengan email ${email} (tidak ada backend)`);
+        // Di sini Anda bisa redirect atau melakukan sesuatu, tapi karena demo kita hanya reset?
+        // Atau bisa tampilkan pesan di card (tambahan)
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'demo-message';
+        msgDiv.innerText = 'Login berhasil (simulasi)';
+        msgDiv.style.marginBottom = '1rem';
+        // Hapus jika sudah ada
+        const existing = document.getElementById('loginForm').querySelector('.demo-message');
+        if (existing) existing.remove();
+        document.getElementById('loginForm').insertBefore(msgDiv, document.getElementById('loginForm').querySelector('form'));
+        // Hilangkan setelah 3 detik
+        setTimeout(() => msgDiv.remove(), 3000);
+      } else {
+        alert('Harap isi email dan password');
+      }
+    }
+
+    // Handler forgot password (demo)
+    function handleForgot(event) {
+      event.preventDefault();
+      const resetEmail = document.getElementById('resetEmail').value;
+      if (resetEmail) {
+        // Tampilkan pesan sukses
+        const msgDiv = document.getElementById('forgotDemoMessage');
+        msgDiv.style.display = 'block';
+        msgDiv.innerText = `Instruksi reset telah dikirim ke ${resetEmail} (demo)`;
+        // sembunyikan setelah 4 detik
+        setTimeout(() => {
+          msgDiv.style.display = 'none';
+        }, 4000);
+        
+        // Opsional: reset form
+        document.getElementById('resetEmail').value = '';
+      } else {
+        alert('Masukkan email terdaftar');
+      }
+    }
+
+    // Menambahkan event listener untuk mencegah aksi default pada link (agar tidak melompat)
+    // Juga memastikan link "Forgot password?" dan "Back to login" tidak menyebabkan reload selain toggle.
+    document.querySelectorAll('.forgot-link, .back-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // Mencegah perilaku default link (#)
+      });
+    });
+  </script>
+</body>
+</html>

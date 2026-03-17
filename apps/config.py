@@ -3,8 +3,17 @@ from pathlib import Path
 
 
 class Config(object):
-    BASE_DIR = Path(__file__).resolve().parent
+    SECRET_KEY = os.getenv("SECRET_KEY", "fallback-secret-key")
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    
+    # folder database
     DB_DIR = BASE_DIR / "database"
+    
+    # pastikan folder ada
+    DB_DIR.mkdir(exist_ok=True)
+    
+    # file database
+    DATABASE = DB_DIR / "database.db"
 
 
 class Debug(Config):
