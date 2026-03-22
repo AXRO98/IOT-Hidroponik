@@ -1,97 +1,73 @@
 """
 Flask Application Factory
-
-File ini bertugas untuk:
-1. Membuat instance aplikasi Flask
-2. Memuat konfigurasi aplikasi
-3. Mendaftarkan semua Blueprint (module aplikasi)
-
-Struktur project yang diasumsikan:
-
-apps/
- ├── authentication/
- │    └── routes.py
- │
- ├── dashboard/
- │    └── routes.py
- │
- ├── config.py
- │
- └── __init__.py  (file ini)
 """
 
 import os
 from flask import Flask, redirect
 from importlib import import_module
-from flask_login import LoginManager
 
-login_manager = LoginManager()
+from apps.extensions import login_manager, socketio
+
+# -------------------------------------------------
+# CONFIG
+# -------------------------------------------------
+
+BLUEPRINT_MODULES = [
+    "authentication",
+    "dashboard",
+]
+
+# -------------------------------------------------
+# BLUEPRINT REGISTRATION
+# -------------------------------------------------
 
 def register_blueprints(app: Flask):
-    """
-    Mendaftarkan semua blueprint dari module aplikasi.
-
-    Setiap module harus memiliki file:
-        apps/<module>/routes.py
-
-    Dan di dalamnya harus terdapat:
-        blueprint = Blueprint(...)
-    """
-
-    modules = (
-        "authentication",
-        "dashboard"
-    )
-
-    for module_name in modules:
+    for module_name in BLUEPRINT_MODULES:
         module = import_module(f"apps.{module_name}.routes")
         app.register_blueprint(module.blueprint)
 
+# -------------------------------------------------
+# EXTENSIONS
+# -------------------------------------------------
 
-
-def create_app(config):
-    """
-    Application Factory.
-
-    Parameter
-    ---------
-    config : object
-        Class konfigurasi Flask yang akan digunakan
-        (Debug / Production)
-
-    Returns
-    -------
-    Flask
-        Instance aplikasi Flask yang sudah siap digunakan.
-    """
-
-    # Contextual
-    static_prefix = '/static'
-
-    TEMPLATES_FOLDER = os.path.join(config.BASE_DIR, 'templates')
-    STATIC_FOLDER = os.path.join(config.BASE_DIR, 'static')
-
-    print(' > TEMPLATES_FOLDER: ' + TEMPLATES_FOLDER)
-    print(' > STATIC_FOLDER:    ' + STATIC_FOLDER)
-
-    app = Flask(
-        __name__,
-        static_url_path=static_prefix,
-        template_folder=TEMPLATES_FOLDER,
-        static_folder=STATIC_FOLDER
-    )
-
-    # Load konfigurasi
-    app.config.from_object(config)
-
-    login_manager.login_view = 'authentication_blueprint.login'
+def register_extensions(app: Flask):
     login_manager.init_app(app)
+    socketio.init_app(app)
 
-    # Register blueprint
-    register_blueprints(app)
+    login_manager.login_view = "authentication_blueprint.login"
+
+# -------------------------------------------------
+# HANDLERS
+# -------------------------------------------------
+
+def register_handlers(app: Flask):
 
     @login_manager.unauthorized_handler
     def unauthorized():
-        return redirect('/login')
+        return redirect("/login")
+
+# -------------------------------------------------
+# APP FACTORY
+# -------------------------------------------------
+
+def create_app(config):
+    """Create Flask App (Factory Pattern)"""
+
+    base_dir = config.BASE_DIR
+
+    app = Flask(
+        __name__,
+        static_url_path="/static",
+        template_folder=os.path.join(base_dir, "templates"),
+        static_folder=os.path.join(base_dir, "static"),
+    )
+
+    # Load config
+    app.config.from_object(config)
+
+    # Register core components
+    register_extensions(app)
+    register_blueprints(app)
+    register_handlers(app)
 
     return app

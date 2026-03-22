@@ -22,7 +22,7 @@ def login():
 
     # Handle POST (login)
     if request.method == 'POST':
-        user_input = request.form.get('email')  # bisa email / username
+        user_input = request.form.get('email')
         password = request.form.get('password')
 
         # Validasi input

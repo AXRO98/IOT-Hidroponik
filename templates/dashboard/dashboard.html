@@ -30,7 +30,7 @@
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-flask"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">pH Air</span>
-                        <span class="info-box-number">6.8</span>
+                        <span class="info-box-number" id="ph-value">-</span>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <span class="info-box-icon bg-success elevation-1"><i class="fas fa-tint"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">TDS / EC</span>
-                        <span class="info-box-number">850 ppm</span>
+                        <span class="info-box-number" id="tds-value">-</span>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-thermometer-half"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">Suhu Air</span>
-                        <span class="info-box-number">25.5 °C</span>
+                        <span class="info-box-number" id="suhu-value">-</span>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-wind"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">Kelembapan Udara</span>
-                        <span class="info-box-number">72%</span>
+                        <span class="info-box-number" id="kelembapan-value">-</span>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                     <div class="card-body table-responsive p-0">
-                        <table class="table table-hover text-nowrap">
+                        <table class="table table-hover text-nowrap" id="sensor-table">
                             <thead>
                                 <tr>
                                     <th>Waktu</th>
@@ -155,34 +155,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>2025-03-16 08:00</td>
-                                    <td>6.8</td>
-                                    <td>850</td>
-                                    <td>25.5</td>
-                                    <td>72</td>
-                                </tr>
-                                <tr>
-                                    <td>2025-03-16 07:00</td>
-                                    <td>6.7</td>
-                                    <td>845</td>
-                                    <td>25.2</td>
-                                    <td>73</td>
-                                </tr>
-                                <tr>
-                                    <td>2025-03-16 06:00</td>
-                                    <td>6.8</td>
-                                    <td>852</td>
-                                    <td>25.0</td>
-                                    <td>74</td>
-                                </tr>
-                                <tr>
-                                    <td>2025-03-16 05:00</td>
-                                    <td>6.9</td>
-                                    <td>860</td>
-                                    <td>24.8</td>
-                                    <td>75</td>
-                                </tr>
+ 
                             </tbody>
                         </table>
                     </div>
@@ -194,30 +167,57 @@
 {% endblock %}
 
 {% block extra_scripts %}
-<!-- PAGE PLUGINS -->
-<!-- jQuery Mapael -->
-<script src="{{ url_for('static', filename='plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
-<script src="{{ url_for('static', filename='plugins/raphael/raphael.min.js') }}"></script>
-<script src="{{ url_for('static', filename='plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
-<script src="{{ url_for('static', filename='plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
+<!-- Socket.IO client -->
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
 <!-- ChartJS -->
 <script src="{{ url_for('static', filename='plugins/chart.js/Chart.min.js') }}"></script>
 <script>
-$(document).ready(function() {
-    // Data contoh untuk grafik (bisa diganti dengan data real dari backend)
-    var labels = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
-    
-    // Data pH
-    var phData = [6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7, 6.8, 6.9, 6.8, 6.7];
-    // Data TDS
-    var tdsData = [850, 845, 852, 860, 855, 848, 850, 845, 850, 855, 860, 858, 852, 849, 850, 847, 851, 853, 850, 846, 849, 852, 850, 848];
-    // Data Suhu
-    var suhuData = [25.5, 25.2, 25.0, 24.8, 24.9, 25.1, 25.3, 25.5, 25.5, 25.6, 25.7, 25.8, 25.8, 25.7, 25.6, 25.5, 25.4, 25.3, 25.2, 25.1, 25.0, 24.9, 24.8, 24.7];
-    // Data Kelembapan
-    var humData = [72, 73, 74, 75, 74, 73, 72, 72, 72, 71, 70, 69, 68, 68, 69, 70, 71, 72, 73, 74, 75, 75, 74, 73];
+/**
+ * IoT Hidroponik - Dashboard Real-time
+ * Menggunakan Socket.IO untuk menerima update sensor secara live.
+ * Fitur:
+ * - Update nilai sensor pada info boxes
+ * - Update grafik dengan data rolling (24 titik)
+ * - Tambah baris baru pada tabel riwayat (max 10 baris)
+ */
 
-    // Fungsi untuk membuat grafik
-    function createChart(ctx, label, data, backgroundColor, borderColor) {
+$(document).ready(function() {
+    // ========== KONFIGURASI ==========
+    const MAX_CHART_POINTS = 24;          // Jumlah titik pada grafik (24 jam)
+    const MAX_TABLE_ROWS = 10;             // Maksimal baris pada tabel riwayat
+
+    // Inisialisasi label waktu (24 jam terakhir, format jam)
+    const labels = [];
+    for (let i = 0; i < MAX_CHART_POINTS; i++) {
+        labels.push(i.toString().padStart(2, '0') + ':00');
+    }
+
+    // Data array untuk setiap sensor (akan diisi dengan data awal)
+    let phData = new Array(MAX_CHART_POINTS).fill(0);
+    let tdsData = new Array(MAX_CHART_POINTS).fill(0);
+    let suhuData = new Array(MAX_CHART_POINTS).fill(0);
+    let humData = new Array(MAX_CHART_POINTS).fill(0);
+
+    // Nilai terbaru (untuk info box)
+    let latestValues = {
+        ph: 0,
+        tds: 0,
+        suhu: 0,
+        kelembapan: 0
+    };
+
+    // ========== FUNGSI UTILITY ==========
+    /**
+     * Membuat grafik line Chart.js
+     * @param {string} canvasId - ID elemen canvas
+     * @param {string} label - Label dataset
+     * @param {Array} data - Array data numerik
+     * @param {string} borderColor - Warna garis
+     * @param {string} backgroundColor - Warna area (fill)
+     * @returns {Chart} Instance Chart.js
+     */
+    function createChart(canvasId, label, data, borderColor, backgroundColor) {
+        const ctx = document.getElementById(canvasId).getContext('2d');
         return new Chart(ctx, {
             type: 'line',
             data: {
@@ -225,12 +225,13 @@ $(document).ready(function() {
                 datasets: [{
                     label: label,
                     data: data,
-                    backgroundColor: backgroundColor,
                     borderColor: borderColor,
+                    backgroundColor: backgroundColor,
                     borderWidth: 2,
                     fill: false,
                     tension: 0.4,
-                    pointRadius: 3
+                    pointRadius: 3,
+                    pointBackgroundColor: borderColor
                 }]
             },
             options: {
@@ -238,50 +239,170 @@ $(document).ready(function() {
                 maintainAspectRatio: false,
                 scales: {
                     y: {
-                        beginAtZero: false
+                        beginAtZero: false,
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: {
+                        ticks: { maxRotation: 45, minRotation: 45, autoSkip: true, maxTicksLimit: 12 }
                     }
                 },
                 plugins: {
-                    legend: {
-                        display: false
-                    }
+                    legend: { display: false },
+                    tooltip: { mode: 'index', intersect: false }
                 }
             }
         });
     }
 
-    // Inisialisasi grafik
-    createChart(
-        document.getElementById('phChart').getContext('2d'),
-        'pH Air',
-        phData,
-        'rgba(23, 162, 184, 0.2)',
-        'rgba(23, 162, 184, 1)'
-    );
+    /**
+     * Memperbarui data grafik dengan nilai baru (rolling window)
+     * @param {Chart} chartInstance - Instance Chart.js
+     * @param {Array} dataArray - Array data yang akan diupdate
+     * @param {number} newValue - Nilai baru
+     */
+    function updateChartData(chartInstance, dataArray, newValue) {
+        dataArray.push(newValue);
+        dataArray.shift();                // Hapus data tertua
+        chartInstance.update();           // Render ulang grafik
+    }
 
-    createChart(
-        document.getElementById('tdsChart').getContext('2d'),
-        'TDS (ppm)',
-        tdsData,
-        'rgba(40, 167, 69, 0.2)',
-        'rgba(40, 167, 69, 1)'
-    );
+    /**
+     * Memperbarui info box dengan nilai terbaru
+     * @param {string} sensorType - 'ph', 'tds', 'suhu', 'kelembapan'
+     * @param {number} value - Nilai sensor
+     * @param {string} unit - Satuan (opsional)
+     */
+    function updateInfoBox(sensorType, value, unit = '') {
+        const elementId = `${sensorType}-value`;
+        const displayValue = unit ? `${value} ${unit}` : value;
+        $(`#${elementId}`).text(displayValue);
+        latestValues[sensorType] = value;
+    }
 
-    createChart(
-        document.getElementById('suhuChart').getContext('2d'),
-        'Suhu (°C)',
-        suhuData,
-        'rgba(255, 193, 7, 0.2)',
-        'rgba(255, 193, 7, 1)'
-    );
+    /**
+     * Menambahkan baris baru ke tabel riwayat
+     * @param {Object} data - Objek berisi { ph, tds, suhu, kelembapan, timestamp }
+     */
+    function addTableRow(data) {
+        const timestamp = data.timestamp ? new Date(data.timestamp).toLocaleString() : new Date().toLocaleString();
+        const row = `
+            <tr>
+                <td>${timestamp}</td>
+                <td>${data.ph || latestValues.ph}</td>
+                <td>${data.tds || latestValues.tds}</td>
+                <td>${data.suhu || latestValues.suhu}</td>
+                <td>${data.kelembapan || latestValues.kelembapan}</td>
+            </tr>
+        `;
+        $('#sensor-table tbody').prepend(row);
+        // Batasi jumlah baris
+        while ($('#sensor-table tbody tr').length > MAX_TABLE_ROWS) {
+            $('#sensor-table tbody tr:last').remove();
+        }
+    }
 
-    createChart(
-        document.getElementById('kelembapanChart').getContext('2d'),
-        'Kelembapan (%)',
-        humData,
-        'rgba(220, 53, 69, 0.2)',
-        'rgba(220, 53, 69, 1)'
-    );
+    // ========== INISIALISASI GRAFIK ==========
+    const phChart = createChart('phChart', 'pH Air', phData, 'rgba(23, 162, 184, 1)', 'rgba(23, 162, 184, 0.1)');
+    const tdsChart = createChart('tdsChart', 'TDS (ppm)', tdsData, 'rgba(40, 167, 69, 1)', 'rgba(40, 167, 69, 0.1)');
+    const suhuChart = createChart('suhuChart', 'Suhu (°C)', suhuData, 'rgba(255, 193, 7, 1)', 'rgba(255, 193, 7, 0.1)');
+    const humChart = createChart('kelembapanChart', 'Kelembapan (%)', humData, 'rgba(220, 53, 69, 1)', 'rgba(220, 53, 69, 0.1)');
+
+    // ========== KONEKSI WEBSOCKET (SOCKET.IO) ==========
+    const socket = io(); // Otomatis terhubung ke server yang sama
+
+    // Event: koneksi berhasil
+    socket.on('connect', function() {
+        console.log('[Socket] Terhubung ke server');
+        // Minta data awal (opsional)
+        socket.emit('message', { type: 'sensor_request', content: {} });
+    });
+
+    // Event: koneksi terputus
+    socket.on('disconnect', function() {
+        console.warn('[Socket] Terputus, mencoba reconnect...');
+    });
+
+    // Event: update sensor dari server (format dari broadcast_sensor_data)
+    socket.on('sensor_update', function(data) {
+        console.log('[Socket] Sensor update:', data);
+
+        const sensorType = data.sensor_type;
+        const value = data.value;
+        const unit = data.unit || '';
+
+        // Update info box dan grafik berdasarkan jenis sensor
+        switch (sensorType) {
+            case 'ph':
+                updateInfoBox('ph', value, unit);
+                updateChartData(phChart, phData, value);
+                break;
+            case 'tds':
+                updateInfoBox('tds', value, unit);
+                updateChartData(tdsChart, tdsData, value);
+                break;
+            case 'suhu':
+                updateInfoBox('suhu', value, unit);
+                updateChartData(suhuChart, suhuData, value);
+                break;
+            case 'kelembapan':
+                updateInfoBox('kelembapan', value, unit);
+                updateChartData(humChart, humData, value);
+                break;
+            default:
+                console.warn('[Socket] Tipe sensor tidak dikenal:', sensorType);
+        }
+
+        // Setelah semua nilai diperbarui, tambahkan baris baru ke tabel
+        // (menggunakan nilai terbaru dari latestValues)
+        addTableRow({
+            timestamp: data.timestamp,
+            ph: latestValues.ph,
+            tds: latestValues.tds,
+            suhu: latestValues.suhu,
+            kelembapan: latestValues.kelembapan
+        });
+    });
+
+    // Event: notifikasi (opsional)
+    socket.on('notification', function(data) {
+        console.log('[Socket] Notifikasi:', data.message);
+        // Tampilkan toast atau alert (opsional)
+        if (data.type === 'warning') {
+            toastr.warning(data.message);
+        } else if (data.type === 'error') {
+            toastr.error(data.message);
+        } else {
+            toastr.info(data.message);
+        }
+    });
+
+    // Event: actuator update (opsional)
+    socket.on('actuator_update', function(data) {
+        console.log('[Socket] Aktuator update:', data);
+        // Bisa ditampilkan di UI jika diperlukan
+    });
+
+    // ========== INISIALISASI TABEL DENGAN DATA AWAL (contoh) ==========
+    const initialData = [
+        { timestamp: '2025-03-16 08:00', ph: 6.8, tds: 850, suhu: 25.5, kelembapan: 72 },
+        { timestamp: '2025-03-16 07:00', ph: 6.7, tds: 845, suhu: 25.2, kelembapan: 73 },
+        { timestamp: '2025-03-16 06:00', ph: 6.8, tds: 852, suhu: 25.0, kelembapan: 74 },
+        { timestamp: '2025-03-16 05:00', ph: 6.9, tds: 860, suhu: 24.8, kelembapan: 75 }
+    ];
+    initialData.forEach(row => addTableRow(row));
+
+    // Opsional: Bersihkan console dari log berlebihan (jika tidak perlu)
+    // console.log('Dashboard real-time siap!');
 });
+</script>
+<!-- Optional: Toastr untuk notifikasi (jika ingin notifikasi lebih menarik) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    // Konfigurasi toastr (opsional)
+    toastr.options = {
+        "positionClass": "toast-top-right",
+        "timeOut": "3000"
+    };
 </script>
 {% endblock %}

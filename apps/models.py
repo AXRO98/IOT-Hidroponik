@@ -20,7 +20,6 @@ def connect_db():
         sqlite3.Connection: Objek koneksi database
     """
     db_path = current_app.config['DATABASE']
-    print("DB PATH:", db_path)  # Debug: tampilkan path database
     conn = sqlite3.connect(str(db_path))
-    conn.row_factory = sqlite3.Row  # agar hasil query bisa diakses seperti dict
+    conn.row_factory = sqlite3.Row
     return conn

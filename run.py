@@ -2,144 +2,179 @@
 File        : run.py
 Author      : Keyfin Agustio Suratman
 Description : App dashboard untuk IoT Hidroponik project robotik SMA Negeri 7 Manado.
-Created     : 2026-03-16
 """
 
 import os
-import datetime
+import sys
+import time
+import logging
+import werkzeug
 from sys import exit
 
 from dotenv import load_dotenv
+from flask import request, g
 from flask_minify import Minify
-from flask import request
-
 from flask_wtf.csrf import CSRFProtect
-from flask_talisman import Talisman
+# from flask_talisman import Talisman
 
-from apps.config import config_dict
 from apps import create_app
+from apps.config import config_dict
+from apps.services import init_services
+from apps.extensions import socketio
 
+from apps.utils import (
+    log_request,
+    log_info,
+    log_success,
+    log_warning,
+    log_error,
+    log_server_event,
+    print_startup_banner
+)
 
 # -------------------------------------------------
-# Load environment variables
+# ENV & BASIC SETUP
 # -------------------------------------------------
 
 load_dotenv()
 
-
-# -------------------------------------------------
-# Debug Mode
-# -------------------------------------------------
-
-DEBUG = (os.getenv("DEBUG", "False") == "True")
+DEBUG = os.getenv("DEBUG", "False") == "True"
 PORT = int(os.getenv("PORT", 5000))
-
-
-# -------------------------------------------------
-# Load Configuration
-# -------------------------------------------------
-
-config_mode = "Debug" if DEBUG else "Production"
-
-try:
-    app_config = config_dict[config_mode]
-
-except KeyError:
-    exit("Error: Invalid <config_mode>. Expected values [Debug, Production]")
-
+CONFIG_MODE = "Debug" if DEBUG else "Production"
 
 # -------------------------------------------------
-# Create Flask App
+# DISABLE DEFAULT FLASK LOGGING
 # -------------------------------------------------
 
-app = create_app(app_config)
-
-
-# -------------------------------------------------
-# Access Logging
-# -------------------------------------------------
-
-LOG_FILE = "log.txt"
-
-def write_log(ip, method, path, status, device):
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    log_line = f"[{timestamp}] [{ip}] {method} {path} | {status} | Device: {device}\n"
-
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write(log_line)
-
+def disable_flask_logging():
+    logging.getLogger("werkzeug").disabled = True
+    sys.modules['flask.cli'].show_server_banner = lambda *x: None
+    werkzeug.serving._log = lambda *args, **kwargs: None
 
 # -------------------------------------------------
-# Enable HTML Minification
+# LOAD CONFIG
 # -------------------------------------------------
 
-if not DEBUG:
-    Minify(app=app, html=True, js=True, cssless=True)
-    print(" [INFO] Minify: ON")
+def get_config():
+    try:
+        return config_dict[CONFIG_MODE]
+    except KeyError:
+        exit("Error: Invalid config mode")
 
-    # -------------------------------------------------
-    # Security: CSRF Protection
-    # -------------------------------------------------
+# -------------------------------------------------
+# CREATE APP
+# -------------------------------------------------
 
-    csrf = CSRFProtect(app)
-    print(" [INFO] CSRF Protection: ON")
+app = create_app(get_config())
 
+# -------------------------------------------------
+# MIDDLEWARE (REQUEST LOGGER)
+# -------------------------------------------------
 
-    # -------------------------------------------------
-    # Security: Secure Headers
-    # -------------------------------------------------
+@app.before_request
+def before_request():
+    g.start_time = time.time()
 
-    #Talisman(app)
-    print(" [INFO] Secure Headers: ON")
+@app.after_request
+def after_request(response):
+    response_time = time.time() - g.start_time if hasattr(g, "start_time") else None
+
+    log_request(
+        request.headers.get("X-Forwarded-For", request.remote_addr),
+        request.method,
+        request.path,
+        response.status_code,
+        request.headers.get("User-Agent", "Unknown"),
+        response_time
+    )
+    return response
+
+# -------------------------------------------------
+# SECURITY & PERFORMANCE
+# -------------------------------------------------
+
+def init_security(app):
+    if not DEBUG:
+        Minify(app=app, html=True, js=True, cssless=True)
+        CSRFProtect(app)
+        # Talisman(app)
+
+        log_success("Security: ENABLED")
+    else:
+        log_warning("Debug Mode: ON")
+
+# -------------------------------------------------
+# ERROR HANDLER
+# -------------------------------------------------
+
+def register_error_handlers(app):
+
+    @app.errorhandler(404)
+    def not_found(error):
+        log_error(f"404: {request.path}")
+        return "Page not found", 404
+
+    @app.errorhandler(500)
+    def internal(error):
+        log_error(f"500: {str(error)}")
+        return "Internal server error", 500
+
+# -------------------------------------------------
+# INIT (RUN ONLY ONCE)
+# -------------------------------------------------
+
+def init_once():
+    """Semua yang HARUS jalan sekali saja"""
     
+    print_startup_banner(
+        CONFIG_MODE,
+        DEBUG,
+        PORT,
+        os.getenv("VERSION"),
+        os.getenv("AUTHOR")
+    )
 
-    # -------------------------------------------------
-    # Access Logging: Log each request to console
-    # -------------------------------------------------
-
-    @app.after_request
-    def log_request(response):
-
-        ip = request.headers.get("X-Forwarded-For", request.remote_addr)
-        method = request.method
-        path = request.path
-        status = response.status_code
-        device = request.headers.get("User-Agent", "Unknown Device")
-
-        # Jika static dan status 304 → abaikan
-        if path.startswith("/static/") and status == 304:
-            return response
-
-        write_log(ip, method, path, status, device)
-
-        return response
-
+    log_success(f"Server starting on http://0.0.0.0:{PORT}")
+    log_info("Press CTRL+C to stop the server")
+    print()
 
 # -------------------------------------------------
-# Debug Logging
-# -------------------------------------------------
-
-if DEBUG:
-    app.logger.info(f"DEBUG = {DEBUG}")
-    app.logger.info(f"PORT  = {PORT}")
-
-
-# -------------------------------------------------
-# Run Server
+# MAIN
 # -------------------------------------------------
 
 if __name__ == "__main__":
 
     try:
-        app.run(
-            debug=DEBUG,
+        disable_flask_logging()
+        register_error_handlers(app)
+
+        # 🔥 FIX DOUBLE RUN (PENTING)
+        if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
+            init_security(app)
+            init_services(app)
+            init_once()
+
+        socketio.run(
+            app,
             host="0.0.0.0",
-            port=PORT
+            port=PORT,
+            debug=DEBUG,
+            allow_unsafe_werkzeug=DEBUG,
+            use_reloader=DEBUG
         )
 
-    except Exception as error_page:
+    except KeyboardInterrupt:
+        print()
+        log_server_event("STOP", "User interrupted")
 
-        print("[=========================[ ERROR ]=========================]")
-        print(f"Error: {error_page}")
-        print("[===========================================================]")
+    except Exception as err:
+        print()
+        log_error("=" * 60)
+        log_error(f"Startup Failed: {str(err)}")
+        log_error("=" * 60)
+
+        if DEBUG:
+            import traceback
+            traceback.print_exc()
+
+        exit(1)

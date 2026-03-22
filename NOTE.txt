@@ -1,10 +1,13 @@
 Website Dashboard IOT Hidroponik
-Version: v0.2.0-beta
+Version: v0.3.0-beta
 
 [ NOTE ]
 - Rapikan kode
 - tambahkan validasi input
-- LOGIN CHECK DI /login itu rawann bangett karna cuman cek usr_id di cookie
+
+
+[ ALORITMA ]
+- Jadi models itu kan untuk atur database. pisahkan database untuk auth dan konten tapi hanya pisahkan tabelnya saja 
 
 
 [ Struktur Website ]
@@ -13,6 +16,7 @@ PATH        Fungsi
 /login      Login Website
 /dashboard  Dashboard Realtime sensor-sensor
 /settings   Untuk setting di nilai berapa akan otomatis menambahkan vitamin
+/profile    Untuk profile user  
 
 [ ROADMAP ]
 v0.1.*-beta
@@ -37,8 +41,13 @@ v0.4.0-beta
 - buat agar user bisa ganti fotonya
 - buat user bisa ganti password
 
+v0.5.0-beta
+- reset password dari otp email
+
+
 [ UPDATE ]
 v0.1.0-beta 16-03-2026 23:10: Membuat web dashboard dan Membuat costomize sidebar
 v0.1.1-beta 17-03-2026 02:40: Animasi preloader
 v0.1.2-beta 17-03-2026 04:00: Customize Sidebar di buat agar bisa simpan localstorage settingannya
 v0.2.0-beta 17-03-2026 20:30: Sudah ada login, Database, dan proteksi halaman. sudah menambahkan favicon.
+v0.3.0-beta 23-03-2026 04:10: Realtime dashboard, SocketIO, Logging App
