@@ -615,6 +615,24 @@ class WebSocketService:
             "timestamp": datetime.now().isoformat(),
         }
         self.emit_to_all("sensor_update", data)
+    
+    def broadcast_sensor_data_bulk(self, device_id: str, sensors: dict):
+        """
+        Broadcast semua data sensor sekaligus ke WebSocket client.
+        """
+        try:
+            data = {
+                "device_id": device_id,
+                "sensors": sensors
+            }
+
+            # Kirim ke semua client
+            self.socketio.emit("sensor_data_bulk", data)
+
+            log_success(f"Bulk data sent: {len(sensors)} sensors")
+
+        except Exception as e:
+            log_error(f"Broadcast bulk error: {str(e)}")
 
     def broadcast_actuator_status(self, device_id: str, actuator: str, status: str):
         """
@@ -637,40 +655,47 @@ class WebSocketService:
     
     def on_mqtt_message_received(self, topic: str, payload: dict):
         """
-        Callback ketika MQTT menerima message.
-        Broadcast ke WebSocket clients.
-        
-        Args:
-            topic: Topik MQTT
-            payload: Payload data sensor
+        Terima data dari MQTT (sudah berisi banyak sensor),
+        lalu broadcast sekaligus ke WebSocket.
         """
-        # Extract sensor type from topic
-        sensor_type = None
-        if 'temperature' in topic:
-            sensor_type = 'temperature'
-        elif 'humidity' in topic:
-            sensor_type = 'humidity'
-        elif 'pressure' in topic:
-            sensor_type = 'pressure'
-        elif 'ph' in topic:
-            sensor_type = 'ph'
-        elif 'tds' in topic:
-            sensor_type = 'tds'
-        
-        # Get value
-        value = payload.get('value') or payload.get(sensor_type)
-        unit = payload.get('unit')
-        
-        if sensor_type and value:
-            # Broadcast to all WebSocket clients
-            self.broadcast_sensor_data(
-                device_id="mqtt_device",
-                sensor_type=sensor_type,
-                value=float(value),
-                unit=unit
-            )
-            
-            log_success(f"MQTT data broadcasted via WebSocket: {sensor_type}={value}")
+        try:
+            device_id = "mqtt_device"
+
+            # ================================
+            # FORMAT DATA SEMUA SENSOR
+            # ================================
+            sensors_data = {}
+
+            for sensor_name, sensor_info in payload.items():
+                if not isinstance(sensor_info, dict):
+                    continue
+
+                value = sensor_info.get("value")
+                unit = sensor_info.get("unit")
+                timestamp = sensor_info.get("timestamp")
+
+                if value is None:
+                    continue
+
+                sensors_data[sensor_name] = {
+                    "value": float(value),
+                    "unit": unit,
+                    "timestamp": timestamp
+                }
+
+            # ================================
+            # BROADCAST SEKALIGUS
+            # ================================
+            if sensors_data:
+                self.broadcast_sensor_data_bulk(
+                    device_id=device_id,
+                    sensors=sensors_data
+                )
+
+                log_success(f"MQTT bulk data broadcasted: {sensors_data}")
+
+        except Exception as e:
+            log_error(f"WebSocket broadcast error: {str(e)}")
 
     # ==================== NOTIFICATION METHODS ====================
     

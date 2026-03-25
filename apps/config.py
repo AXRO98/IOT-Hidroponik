@@ -23,21 +23,16 @@ class Config(object):
     MQTT_BROKER_PORT = int(os.getenv('MQTT_BROKER_PORT', 1883))
     MQTT_USERNAME = os.getenv('MQTT_USERNAME', None)
     MQTT_PASSWORD = os.getenv('MQTT_PASSWORD', None)
-    MQTT_CLIENT_ID = os.getenv('MQTT_CLIENT_ID', 'server-webs')
+    MQTT_CLIENT_ID = str(MQTT_USERNAME) + '_webs'
     MQTT_KEEPALIVE = int(os.getenv('MQTT_KEEPALIVE', 60))
    
     # ================================================
     # MQTT TOPIC STRUCTURE (CONSISTENT)
     # ================================================
-    MQTT_TOPIC_BASE = "sensors"
-
-    MQTT_TOPIC_TEMPERATURE = f"{MQTT_TOPIC_BASE}/temperature"
-    MQTT_TOPIC_HUMIDITY    = f"{MQTT_TOPIC_BASE}/humidity"
-    MQTT_TOPIC_PH          = f"{MQTT_TOPIC_BASE}/ph"
-    MQTT_TOPIC_TDS         = f"{MQTT_TOPIC_BASE}/tds"
+    MQTT_TOPIC_BASE = os.getenv('MQTT_TOPIC_SENSOR', None)
 
     # Subscribe semua sensor
-    MQTT_TOPIC_ALL = f"{MQTT_TOPIC_BASE}/+"
+    MQTT_TOPIC_SENSOR = f"{MQTT_TOPIC_BASE}/+"
 
     # ================================================
     # WEBSOCKET CONFIGURATION

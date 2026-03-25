@@ -317,47 +317,58 @@ $(document).ready(function() {
         tds: 'tds',
         ph: 'ph'
     };
+    
+    // Event: update semua sensor (bulk)
+    socket.on('sensor_data_bulk', function(data) {
+        console.log('[Socket] Bulk sensor update:', data);
 
-    // Event: update sensor
-    socket.on('sensor_update', function(data) {
-        console.log('[Socket] Sensor update:', data);
+        const sensors = data.sensors;
 
-        const rawType = data.sensor_type;
-        const sensorType = sensorMap[rawType] || rawType; // mapping disini
-        const value = data.value;
-        const unit = data.unit || '';
+        // Loop semua sensor
+        Object.keys(sensors).forEach(rawType => {
+            const sensor = sensors[rawType];
 
-        switch (sensorType) {
-            case 'ph':
-                updateInfoBox('ph', value, unit);
-                updateChartData(phChart, phData, value);
-                latestValues.ph = value;
-                break;
+            const sensorType = sensorMap[rawType] || rawType;
+            const value = sensor.value;
+            const unit = sensor.unit || '';
+            const timestamp = sensor.timestamp;
 
-            case 'tds':
-                updateInfoBox('tds', value, unit);
-                updateChartData(tdsChart, tdsData, value);
-                latestValues.tds = value;
-                break;
+            switch (sensorType) {
+                case 'ph':
+                    updateInfoBox('ph', value, unit);
+                    updateChartData(phChart, phData, value);
+                    latestValues.ph = value;
+                    break;
 
-            case 'suhu':
-                updateInfoBox('suhu', value, unit);
-                updateChartData(suhuChart, suhuData, value);
-                latestValues.suhu = value;
-                break;
+                case 'tds':
+                    updateInfoBox('tds', value, unit);
+                    updateChartData(tdsChart, tdsData, value);
+                    latestValues.tds = value;
+                    break;
 
-            case 'kelembapan':
-                updateInfoBox('kelembapan', value, unit);
-                updateChartData(humChart, humData, value);
-                latestValues.kelembapan = value;
-                break;
+                case 'suhu':
+                    updateInfoBox('suhu', value, unit);
+                    updateChartData(suhuChart, suhuData, value);
+                    latestValues.suhu = value;
+                    break;
 
-            default:
-                console.warn('[Socket] Tipe sensor tidak dikenal:', rawType);
-        }
+                case 'kelembapan':
+                    updateInfoBox('kelembapan', value, unit);
+                    updateChartData(humChart, humData, value);
+                    latestValues.kelembapan = value;
+                    break;
 
+                default:
+                    console.warn('[Socket] Tipe sensor tidak dikenal:', rawType);
+            }
+        });
+
+        // Ambil timestamp dari salah satu sensor (anggap sama semua)
+        const firstSensor = Object.values(sensors)[0];
+
+        // Tambah ke tabel SEKALI saja
         addTableRow({
-            timestamp: data.timestamp,
+            timestamp: firstSensor?.timestamp,
             ph: latestValues.ph,
             tds: latestValues.tds,
             suhu: latestValues.suhu,
@@ -431,15 +442,6 @@ $(document).ready(function() {
         // Notifikasi lokal sebagai konfirmasi
         toastr.info('Notifikasi test dikirim ke server', 'Test');
     };
-
-    // ========== DATA AWAL ==========
-    const initialData = [
-        { timestamp: '2025-03-16 08:00', ph: 6.8, tds: 850, suhu: 25.5, kelembapan: 72 },
-        { timestamp: '2025-03-16 07:00', ph: 6.7, tds: 845, suhu: 25.2, kelembapan: 73 },
-        { timestamp: '2025-03-16 06:00', ph: 6.8, tds: 852, suhu: 25.0, kelembapan: 74 },
-        { timestamp: '2025-03-16 05:00', ph: 6.9, tds: 860, suhu: 24.8, kelembapan: 75 }
-    ];
-    initialData.forEach(row => addTableRow(row));
 
     // Notifikasi selamat datang
     setTimeout(() => {

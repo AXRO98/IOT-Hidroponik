@@ -8,7 +8,6 @@ from importlib import import_module
 
 from apps.extensions import login_manager, socketio
 from apps.utils import log_info, log_success, log_warning, log_error
-from apps.services.mqtt_client import mqtt_client
 
 # -------------------------------------------------
 # CONFIG
@@ -62,7 +61,7 @@ def init_mqtt(app: Flask):
         log_info("Skipping MQTT init - reloader process")
         return None, None
 
-    from apps.services.mqtt_client import mqtt_client
+    from apps.services.mqtt_connect import mqtt_client
     from apps.services.websocket_service import websocket_service
 
     # Initialize MQTT client
@@ -99,5 +98,17 @@ def create_app(config):
     register_extensions(app)
     register_blueprints(app)
     register_handlers(app)
+
+    @login_manager.unauthorized_handler
+    def unauthorized():
+        return redirect('/login')
+
+    @app.errorhandler(401)
+    def handle_401(error):
+        return redirect('/login')
+    
+    @app.route('/')
+    def index():
+        return redirect('/login')
 
     return app

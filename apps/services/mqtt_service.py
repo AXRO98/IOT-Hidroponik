@@ -3,12 +3,12 @@ Module      : apps.services.mqtt_service
 Author      : Keyfin Suratman
 Description : Service untuk mengelola data sensor dari MQTT
 Created     : 2026-03-23
-Updated     : 2026-03-24
+Updated     : 2026-03-26
 """
 
 import json
 from datetime import datetime
-from typing import Dict, Any
+from typing import Dict, Any, List, Optional
 
 # Perbaiki import model
 from apps.services.models import SensorDataModel
@@ -26,74 +26,74 @@ sensor_data_cache = {
     'all_sensors': {}
 }
 
-def process_sensor_data(topic, data):
 
+def process_sensor_data(payload: Dict[str, Any]) -> None:
     """
-    Proses data sensor yang diterima dari MQTT
+    Proses data sensor dari MQTT dan kirim sekaligus (bulk) ke WebSocket.
     """
     try:
-        # Extract sensor type from topic
-        sensor_type = extract_sensor_type(topic)
-        
-        # Get value from data
-        value = data.get('value') or data.get(sensor_type)
-        
-        if value and sensor_type:
-            # Save to database
-            sensor_id = SensorDataModel.save_sensor_data(
-                sensor_type=sensor_type,
-                value=float(value),
-                unit=data.get('unit'),
-                topic=topic,
-                raw_data=data
-            )
-            
-            log_success(f"Sensor data saved to DB [ID: {sensor_id}] - {sensor_type}: {value} {data.get('unit', get_default_unit(sensor_type))}")
-            log_mqtt("PROCESS", topic, f"Saved to DB: {sensor_type}={value}")
-            
-            # Broadcast via WebSocket
-            try:
-                from apps.services.websocket_service import websocket_service
-                # Pastikan websocket_service sudah diinisialisasi
-                if websocket_service and websocket_service.socketio:
-                    websocket_service.on_mqtt_message_received(topic, data)
-                    log_mqtt("BROADCAST", topic, "Data sent to WebSocket clients")
-                else:
-                    log_warning("WebSocket service not ready, broadcast skipped")
-            except Exception as e:
-                log_error(f"Failed to broadcast to WebSocket: {e}")
-        
-        # Store in cache
-        sensor_data_cache['last_update'] = datetime.now()
-        
-        if sensor_type:
-            sensor_data_cache[sensor_type] = {
-                'value': value,
-                'unit': data.get('unit', get_default_unit(sensor_type)),
-                'timestamp': datetime.now().isoformat(),
-                'raw_data': data
+        from apps.services.websocket_service import websocket_service
+
+        # ================================
+        # TIMESTAMP
+        # ================================
+        timestamp = payload.pop('timestamp', None) or datetime.now().isoformat()
+
+        # ================================
+        # KUMPULKAN SEMUA SENSOR
+        # ================================
+        all_sensor_data = {}
+
+        for sensor_name, sensor_value in payload.items():
+
+            # Skip metadata
+            if sensor_name.startswith('_'):
+                continue
+
+            if sensor_value is None:
+                continue
+
+            all_sensor_data[sensor_name] = {
+                'value': float(sensor_value),
+                'unit': None,
+                'timestamp': timestamp
             }
-        
-        sensor_data_cache['all_sensors'][datetime.now().isoformat()] = {
-            'topic': topic,
-            'data': data,
-            'sensor_type': sensor_type
-        }
-        
-        # Keep only last 100 records in cache
-        if len(sensor_data_cache['all_sensors']) > 100:
-            oldest_key = min(sensor_data_cache['all_sensors'].keys())
-            del sensor_data_cache['all_sensors'][oldest_key]
-        
-        log_info(f"Processed MQTT data: {sensor_type} = {value} (from topic: {topic})")
-        
+
+        # ================================
+        # KIRIM SEKALIGUS (BULK)
+        # ================================
+        if all_sensor_data:
+            websocket_service.on_mqtt_message_received(
+                topic="sensor/all",
+                payload=all_sensor_data
+            )
+
     except Exception as e:
         error_msg = str(e)
         log_error(f"Error processing sensor data: {error_msg}")
-        log_mqtt("ERROR", topic, f"Processing error: {error_msg}")
+        log_mqtt("ERROR", "process_sensor_data", error_msg)
 
 def extract_sensor_type(topic: str) -> str:
-    """Extract sensor type from MQTT topic"""
+    """
+    Extract sensor type from MQTT topic.
+    
+    Mencocokkan topic dengan keyword yang dikenal untuk menentukan tipe sensor.
+    
+    Args:
+        topic (str): MQTT topic string (contoh: "sensors/temperature/data")
+        
+    Returns:
+        str: Sensor type ('temperature', 'humidity', 'pressure', 'ph', 'tds', 
+             'water_level', atau 'unknown')
+             
+    Contoh:
+        >>> extract_sensor_type("sensors/temperature/data")
+        'temperature'
+        >>> extract_sensor_type("devices/sensor_01/ph")
+        'ph'
+        >>> extract_sensor_type("unknown/topic")
+        'unknown'
+    """
     if 'temperature' in topic:
         return 'temperature'
     elif 'humidity' in topic:
@@ -113,8 +113,25 @@ def extract_sensor_type(topic: str) -> str:
             return parts[-1]  # Last part as sensor type
         return 'unknown'
 
+
 def get_default_unit(sensor_type: str) -> str:
-    """Get default unit for sensor type"""
+    """
+    Get default unit for sensor type.
+    
+    Mengembalikan unit pengukuran default berdasarkan tipe sensor.
+    
+    Args:
+        sensor_type (str): Tipe sensor ('temperature', 'humidity', dll)
+        
+    Returns:
+        str: Unit pengukuran (contoh: '°C', '%', 'hPa', 'pH', 'ppm', 'cm')
+        
+    Contoh:
+        >>> get_default_unit("temperature")
+        '°C'
+        >>> get_default_unit("unknown")
+        ''
+    """
     units = {
         'temperature': '°C',
         'humidity': '%',
@@ -126,8 +143,37 @@ def get_default_unit(sensor_type: str) -> str:
     }
     return units.get(sensor_type, '')
 
+
 def get_latest_sensor_data() -> Dict[str, Any]:
-    """Get latest sensor data from cache"""
+    """
+    Get latest sensor data from cache.
+    
+    Mengambil data sensor terbaru yang tersimpan di cache.
+    Berguna untuk menampilkan data real-time di dashboard.
+    
+    Args:
+        None
+        
+    Returns:
+        dict: Data sensor terkini dengan struktur:
+            {
+                'temperature': {'value': 25.5, 'unit': '°C', 'timestamp': '...', 'raw_data': {...}},
+                'humidity': {...},
+                'pressure': {...},
+                'ph': {...},
+                'tds': {...},
+                'water_level': {...},
+                'last_update': datetime,
+                'status': 'active' or 'no_data'
+            }
+            
+    Contoh:
+        >>> latest = get_latest_sensor_data()
+        >>> print(latest['temperature']['value'])
+        25.5
+        >>> print(latest['status'])
+        'active'
+    """
     return {
         'temperature': sensor_data_cache.get('temperature'),
         'humidity': sensor_data_cache.get('humidity'),
@@ -139,8 +185,34 @@ def get_latest_sensor_data() -> Dict[str, Any]:
         'status': 'active' if sensor_data_cache['last_update'] else 'no_data'
     }
 
-def get_sensor_history(limit: int = 50) -> list:
-    """Get sensor history from cache"""
+
+def get_sensor_history(limit: int = 50) -> List[Dict[str, Any]]:
+    """
+    Get sensor history from cache.
+    
+    Mengambil riwayat data sensor dengan jumlah maksimum yang ditentukan.
+    Data diurutkan dari yang terbaru ke terlama.
+    
+    Args:
+        limit (int, optional): Jumlah maksimum record yang diambil. Default: 50
+        
+    Returns:
+        list: Daftar data sensor dengan format:
+            [
+                {
+                    'timestamp': '2024-03-26T10:30:00.123456',
+                    'topic': 'sensors/temperature/data',
+                    'data': {...},
+                    'sensor_type': 'temperature'
+                },
+                ...
+            ]
+            
+    Contoh:
+        >>> history = get_sensor_history(10)
+        >>> for record in history:
+        ...     print(f"{record['timestamp']}: {record['sensor_type']} = {record['data']}")
+    """
     history = []
     for timestamp, data in sorted(sensor_data_cache['all_sensors'].items(), reverse=True)[:limit]:
         history.append({
@@ -149,17 +221,34 @@ def get_sensor_history(limit: int = 50) -> list:
         })
     return history
 
-def publish_command(topic: str, command: str, value: Any = None):
+
+def publish_command(topic: str, command: str, value: Any = None) -> bool:
     """
-    Publish command to MQTT broker
+    Publish command to MQTT broker.
+    
+    Mengirim perintah kontrol ke perangkat melalui MQTT.
+    Berguna untuk mengontrol actuator atau mengirim command ke sensor.
     
     Args:
-        topic: Target topic
-        command: Command name
-        value: Command value
+        topic (str): Target topic (contoh: "actuators/light/command")
+        command (str): Command name (contoh: "set_state", "calibrate")
+        value (any, optional): Command value (contoh: "ON", 25.5, {"mode": "auto"})
         
     Returns:
-        bool: True jika publish berhasil
+        bool: True jika publish berhasil, False jika gagal
+        
+    Contoh:
+        >>> # Nyalakan lampu
+        >>> publish_command("actuators/light/command", "set_state", "ON")
+        True
+        
+        >>> # Set suhu target heater
+        >>> publish_command("actuators/heater/command", "set_temperature", 25.5)
+        True
+        
+        >>> # Kalibrasi sensor pH
+        >>> publish_command("sensors/ph/command", "calibrate", {"point": 7.0})
+        True
     """
     from apps.services.mqtt_client import mqtt_client
     
@@ -182,8 +271,25 @@ def publish_command(topic: str, command: str, value: Any = None):
     
     return success
 
-def clear_sensor_cache():
-    """Clear sensor data cache"""
+
+def clear_sensor_cache() -> None:
+    """
+    Clear sensor data cache.
+    
+    Menghapus semua data sensor yang tersimpan di cache.
+    Berguna untuk reset data atau debugging.
+    
+    Args:
+        None
+        
+    Returns:
+        None
+        
+    Contoh:
+        >>> clear_sensor_cache()
+        # Semua data cache di-reset ke None
+        # Log: "Sensor cache cleared"
+    """
     sensor_data_cache['temperature'] = None
     sensor_data_cache['humidity'] = None
     sensor_data_cache['pressure'] = None

@@ -7140,3 +7140,1399 @@ Chrome/146.0.0.0 Safari/537.36
 [2026-03-24 03:26:56] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.747s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
 [2026-03-24 03:26:56] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js.map | 304 | 0.811s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
 [2026-03-24 03:26:56] [127.0.0.1] GET /static/js/adminlte.js.map | 304 | 0.824s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:16:13] [WARNING] Debug Mode: ON
+[2026-03-25 02:16:13] [INFO] Initializing MQTT client...
+[2026-03-25 02:16:13] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 02:16:13] [INFO] Setting up TLS for port 8883...
+[2026-03-25 02:16:13] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 02:16:15] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 02:16:15] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 02:16:15] [INFO] Initializing services...
+[2026-03-25 02:16:15] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 02:16:15] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 02:16:15] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 02:16:15] [SUCCESS] All services initialized
+[2026-03-25 02:16:15] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 02:16:43] [127.0.0.1] GET /login | 200 | 0.134s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:16:43] [ERROR] 404: /favicon.ico
+[2026-03-25 02:16:43] [127.0.0.1] GET /favicon.ico | 404 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:18:17] [WARNING] Debug Mode: ON
+[2026-03-25 02:18:17] [INFO] Initializing MQTT client...
+[2026-03-25 02:18:17] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 02:18:17] [INFO] Setting up TLS for port 8883...
+[2026-03-25 02:18:17] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 02:18:18] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 02:18:18] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 02:18:18] [INFO] Initializing services...
+[2026-03-25 02:18:18] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 02:18:18] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 02:18:18] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 02:18:18] [SUCCESS] All services initialized
+[2026-03-25 02:18:18] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 02:18:19] [ERROR] 404: /
+[2026-03-25 02:18:19] [127.0.0.1] GET / | 404 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:18:44] [WARNING] Debug Mode: ON
+[2026-03-25 02:18:44] [INFO] Initializing MQTT client...
+[2026-03-25 02:18:44] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 02:18:44] [INFO] Setting up TLS for port 8883...
+[2026-03-25 02:18:44] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 02:18:45] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 02:18:45] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 02:18:45] [INFO] Initializing services...
+[2026-03-25 02:18:45] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 02:18:45] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 02:18:45] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 02:18:45] [SUCCESS] All services initialized
+[2026-03-25 02:18:45] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 02:18:58] [127.0.0.1] GET /dashboard/ | 302 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:18:58] [127.0.0.1] GET /login | 200 | 0.011s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:21:10] [WARNING] Debug Mode: ON
+[2026-03-25 02:21:10] [INFO] Initializing MQTT client...
+[2026-03-25 02:21:10] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 02:21:10] [INFO] Setting up TLS for port 8883...
+[2026-03-25 02:21:11] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 02:21:12] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 02:21:12] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 02:21:12] [INFO] Initializing services...
+[2026-03-25 02:21:12] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 02:21:12] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 02:21:12] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 02:21:12] [SUCCESS] All services initialized
+[2026-03-25 02:21:12] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 02:21:18] [127.0.0.1] GET / | 302 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:21:18] [127.0.0.1] GET /login | 200 | 0.010s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:21:55] [WARNING] Debug Mode: ON
+[2026-03-25 02:21:55] [INFO] Initializing MQTT client...
+[2026-03-25 02:21:55] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 02:21:55] [INFO] Setting up TLS for port 8883...
+[2026-03-25 02:21:55] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 02:21:55] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 02:21:55] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 02:21:55] [INFO] Initializing services...
+[2026-03-25 02:21:55] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 02:21:55] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 02:21:55] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 02:21:55] [SUCCESS] All services initialized
+[2026-03-25 02:21:56] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 02:21:57] [127.0.0.1] GET /login | 200 | 0.008s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:21:58] [127.0.0.1] GET /login | 200 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:03] [ERROR] 404: /.well-known/appspecific/com.chrome.devtools.json
+[2026-03-25 02:22:03] [127.0.0.1] GET /.well-known/appspecific/com.chrome.devtools.json | 404 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:06] [127.0.0.1] GET /login | 200 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:06] [ERROR] 404: /.well-known/appspecific/com.chrome.devtools.json
+[2026-03-25 02:22:06] [127.0.0.1] GET /.well-known/appspecific/com.chrome.devtools.json | 404 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:35] [127.0.0.1] POST /login | 200 | 0.792s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:35] [127.0.0.1] GET /dashboard/ | 200 | 0.629s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.533s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | 0.044s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/img/user.png | 304 | 0.018s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.687s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.714s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.729s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.736s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.770s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | 0.123s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.052s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | 0.119s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.048s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.073s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.017s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | 0.111s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/js/customize.js | 304 | 0.051s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.012s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.017s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.014s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | 0.131s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 02:22:36] [127.0.0.1] GET /static/js/adminlte.js | 304 | 0.227s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:01] [WARNING] Debug Mode: ON
+[2026-03-25 17:37:01] [INFO] Initializing MQTT client...
+[2026-03-25 17:37:01] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 17:37:01] [INFO] Setting up TLS for port 8883...
+[2026-03-25 17:37:01] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 17:37:02] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 17:37:02] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 17:37:02] [INFO] Initializing services...
+[2026-03-25 17:37:02] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 17:37:02] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 17:37:02] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 17:37:02] [SUCCESS] All services initialized
+[2026-03-25 17:37:03] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 17:37:10] [127.0.0.1] GET /dashboard/ | 200 | 0.040s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.567s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/img/user.png | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/js/adminlte.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.651s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.673s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/js/customize.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.684s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.711s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:10] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.719s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:11] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:11] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:11] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:37:11] [127.0.0.1] GET /static/img/favicon/favicon.ico | 304 | 0.018s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /dashboard/ | 200 | 0.149s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.006s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | 0.005s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/img/user.png | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/js/adminlte.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.009s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.007s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | 0.006s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/js/customize.js | 304 | 0.006s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:29] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:30] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.008s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:30] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.005s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:30] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.006s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:38:30] [127.0.0.1] GET /static/img/favicon/favicon.ico | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /dashboard/ | 200 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.008s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.005s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/img/user.png | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | 0.014s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/js/adminlte.js | 304 | 0.009s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | 0.010s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.006s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/js/customize.js | 304 | 0.005s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | 0.007s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:39:58] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:28] [INFO] Processed MQTT data: data = None (from topic: sensors/data)
+[2026-03-25 17:46:32] [INFO] Processed MQTT data: data = None (from topic: sensors/data)
+[2026-03-25 17:46:36] [INFO] Processed MQTT data: data = None (from topic: sensors/data)
+[2026-03-25 17:46:46] [127.0.0.1] GET /dashboard/ | 200 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/img/user.png | 304 | 0.005s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/js/adminlte.js | 304 | 0.006s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.006s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.005s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/js/customize.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.004s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 17:46:46] [ERROR] Error handling sensor request: Object of type datetime is not JSON serializable
+[2026-03-25 17:46:46] [127.0.0.1] GET /static/img/favicon/favicon.ico | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:38:05] [WARNING] Debug Mode: ON
+[2026-03-25 23:38:05] [INFO] Initializing MQTT client...
+[2026-03-25 23:38:05] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:38:05] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:38:05] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:38:06] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:38:06] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:38:06] [INFO] Initializing services...
+[2026-03-25 23:38:06] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:38:06] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:38:06] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:38:06] [SUCCESS] All services initialized
+[2026-03-25 23:38:07] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 23:39:30] [WARNING] Debug Mode: ON
+[2026-03-25 23:39:30] [INFO] Initializing MQTT client...
+[2026-03-25 23:39:30] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:39:30] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:39:30] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:39:31] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:39:31] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:39:31] [INFO] Initializing services...
+[2026-03-25 23:39:31] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:39:31] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:39:31] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:39:31] [SUCCESS] All services initialized
+[2026-03-25 23:39:31] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 23:41:59] [WARNING] Debug Mode: ON
+[2026-03-25 23:41:59] [INFO] Initializing MQTT client...
+[2026-03-25 23:41:59] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:41:59] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:41:59] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:42:10] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:42:10] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:42:10] [INFO] Initializing services...
+[2026-03-25 23:42:10] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:42:10] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:42:10] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:42:10] [SUCCESS] All services initialized
+[2026-03-25 23:42:10] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 23:42:47] [127.0.0.1] GET /dashboard/ | 200 | 0.357s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.536s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.556s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/img/user.png | 304 | 0.012s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.582s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.617s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.625s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.101s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | 0.634s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | 0.062s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | 0.069s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.043s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.029s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.053s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.014s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.014s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | 0.067s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.015s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.015s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | 0.088s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/js/customize.js | 304 | 0.045s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/js/adminlte.js | 304 | 0.167s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:42:48] [127.0.0.1] GET /static/img/favicon/favicon.ico | 304 | 0.016s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-25 23:46:42] [WARNING] UNAUTHORIZED CONNECT ATTEMPT - IP: 127.0.0.1
+[2026-03-25 23:50:07] [WARNING] Debug Mode: ON
+[2026-03-25 23:50:07] [INFO] Initializing MQTT client...
+[2026-03-25 23:50:07] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:50:07] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:50:07] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:50:08] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:50:08] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:50:08] [INFO] Initializing services...
+[2026-03-25 23:50:08] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:50:08] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:50:08] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:50:08] [SUCCESS] All services initialized
+[2026-03-25 23:50:08] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 23:53:02] [WARNING] Debug Mode: ON
+[2026-03-25 23:53:02] [INFO] Initializing MQTT client...
+[2026-03-25 23:53:02] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:53:02] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:53:02] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:53:03] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:53:03] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:53:03] [INFO] Initializing services...
+[2026-03-25 23:53:03] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:53:03] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:53:03] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:53:03] [SUCCESS] All services initialized
+[2026-03-25 23:53:03] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 23:55:16] [WARNING] Debug Mode: ON
+[2026-03-25 23:55:16] [INFO] Initializing MQTT client...
+[2026-03-25 23:55:16] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:55:16] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:55:16] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:55:17] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:55:17] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:55:17] [INFO] Initializing services...
+[2026-03-25 23:55:17] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:55:17] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:55:17] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:55:17] [SUCCESS] All services initialized
+[2026-03-25 23:55:17] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 23:55:37] [WARNING] Debug Mode: ON
+[2026-03-25 23:55:37] [INFO] Initializing MQTT client...
+[2026-03-25 23:55:37] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:55:37] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:55:37] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:55:38] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:55:38] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:55:38] [INFO] Initializing services...
+[2026-03-25 23:55:38] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:55:38] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:55:38] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:55:38] [SUCCESS] All services initialized
+[2026-03-25 23:55:38] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-25 23:59:35] [WARNING] Debug Mode: ON
+[2026-03-25 23:59:35] [INFO] Initializing MQTT client...
+[2026-03-25 23:59:35] [INFO] MQTT credentials set for user: server-web
+[2026-03-25 23:59:35] [INFO] Setting up TLS for port 8883...
+[2026-03-25 23:59:35] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-25 23:59:36] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-25 23:59:36] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-25 23:59:36] [INFO] Initializing services...
+[2026-03-25 23:59:36] [SUCCESS] WebSocketIO Service initialized
+[2026-03-25 23:59:36] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-25 23:59:36] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-25 23:59:36] [SUCCESS] All services initialized
+[2026-03-25 23:59:36] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 00:07:23] [WARNING] Debug Mode: ON
+[2026-03-26 00:07:23] [INFO] Initializing MQTT client...
+[2026-03-26 00:07:23] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:07:23] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:07:23] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:07:24] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:07:24] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:07:24] [INFO] Initializing services...
+[2026-03-26 00:07:24] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:07:24] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:07:24] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:07:24] [SUCCESS] All services initialized
+[2026-03-26 00:07:25] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 00:33:22] [WARNING] Debug Mode: ON
+[2026-03-26 00:33:22] [INFO] Initializing MQTT client...
+[2026-03-26 00:33:22] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:33:22] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:33:22] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:33:23] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:33:23] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:33:23] [INFO] Initializing services...
+[2026-03-26 00:33:23] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:33:23] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:33:23] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:33:23] [SUCCESS] All services initialized
+[2026-03-26 00:33:23] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 00:40:37] [WARNING] Debug Mode: ON
+[2026-03-26 00:40:37] [INFO] Initializing MQTT client...
+[2026-03-26 00:40:37] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:40:37] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:40:37] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:40:38] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:40:38] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:40:38] [INFO] Initializing services...
+[2026-03-26 00:40:38] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:40:38] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:40:38] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:40:38] [SUCCESS] All services initialized
+[2026-03-26 00:40:39] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 00:41:02] [INFO] Processed MQTT data: data = None (from topic: sensors/data)
+[2026-03-26 00:41:37] [SUCCESS] Sensor data saved to DB [ID: 14] - ph: 7.2 pH
+[2026-03-26 00:41:37] [SUCCESS] MQTT data broadcasted via WebSocket: ph=7.2
+[2026-03-26 00:41:37] [INFO] Processed MQTT data: ph = 7.2 (from topic: sensors/ph)
+[2026-03-26 00:41:40] [SUCCESS] Sensor data saved to DB [ID: 15] - ph: 7.2 pH
+[2026-03-26 00:41:40] [SUCCESS] MQTT data broadcasted via WebSocket: ph=7.2
+[2026-03-26 00:41:40] [INFO] Processed MQTT data: ph = 7.2 (from topic: sensors/ph)
+[2026-03-26 00:41:45] [SUCCESS] Sensor data saved to DB [ID: 16] - ph: 7.2 pH
+[2026-03-26 00:41:45] [SUCCESS] MQTT data broadcasted via WebSocket: ph=7.2
+[2026-03-26 00:41:45] [INFO] Processed MQTT data: ph = 7.2 (from topic: sensors/ph)
+[2026-03-26 00:42:59] [WARNING] Debug Mode: ON
+[2026-03-26 00:42:59] [INFO] Initializing MQTT client...
+[2026-03-26 00:42:59] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:42:59] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:42:59] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:43:00] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:43:00] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:43:00] [INFO] Initializing services...
+[2026-03-26 00:43:00] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:43:00] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:43:00] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:43:00] [SUCCESS] All services initialized
+[2026-03-26 00:43:00] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 00:43:10] [SUCCESS] Sensor data saved to DB [ID: 17] - ph: 4.9 pH
+[2026-03-26 00:43:10] [SUCCESS] MQTT data broadcasted via WebSocket: ph=4.9
+[2026-03-26 00:43:10] [INFO] Processed MQTT data: ph = 4.9 (from topic: sensors/ph)
+[2026-03-26 00:44:16] [WARNING] Debug Mode: ON
+[2026-03-26 00:44:16] [INFO] Initializing MQTT client...
+[2026-03-26 00:44:16] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:44:16] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:44:16] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:44:22] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:44:22] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:44:22] [INFO] Initializing services...
+[2026-03-26 00:44:22] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:44:22] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:44:22] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:44:22] [SUCCESS] All services initialized
+[2026-03-26 00:44:23] [SUCCESS] Subscribed to topic: sensors/+/data/+
+[2026-03-26 00:57:00] [WARNING] Debug Mode: ON
+[2026-03-26 00:57:00] [INFO] Initializing MQTT client...
+[2026-03-26 00:57:00] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:57:00] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:57:00] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:57:01] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:57:01] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:57:01] [INFO] Initializing services...
+[2026-03-26 00:57:01] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:57:01] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:57:01] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:57:01] [SUCCESS] All services initialized
+[2026-03-26 00:57:02] [SUCCESS] Subscribed to topic: sensors/+/data/+
+[2026-03-26 00:57:53] [WARNING] Debug Mode: ON
+[2026-03-26 00:57:53] [INFO] Initializing MQTT client...
+[2026-03-26 00:57:53] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:57:53] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:57:53] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:57:54] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:57:54] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:57:54] [INFO] Initializing services...
+[2026-03-26 00:57:54] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:57:54] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:57:54] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:57:54] [SUCCESS] All services initialized
+[2026-03-26 00:57:54] [SUCCESS] Subscribed to topic: sensors/+/data/+
+[2026-03-26 00:58:05] [WARNING] Debug Mode: ON
+[2026-03-26 00:58:05] [INFO] Initializing MQTT client...
+[2026-03-26 00:58:05] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:58:05] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:58:05] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:58:06] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:58:06] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:58:06] [INFO] Initializing services...
+[2026-03-26 00:58:06] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:58:06] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:58:06] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:58:06] [SUCCESS] All services initialized
+[2026-03-26 00:58:06] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 00:58:38] [SUCCESS] Sensor data saved to DB [ID: 18] - ph: 4.9 pH
+[2026-03-26 00:58:38] [SUCCESS] MQTT data broadcasted via WebSocket: ph=4.9
+[2026-03-26 00:58:38] [INFO] Processed MQTT data: ph = 4.9 (from topic: sensors/ph)
+[2026-03-26 00:59:51] [WARNING] Debug Mode: ON
+[2026-03-26 00:59:51] [INFO] Initializing MQTT client...
+[2026-03-26 00:59:51] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 00:59:51] [INFO] Setting up TLS for port 8883...
+[2026-03-26 00:59:51] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 00:59:52] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 00:59:52] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 00:59:52] [INFO] Initializing services...
+[2026-03-26 00:59:52] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 00:59:52] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 00:59:52] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 00:59:52] [SUCCESS] All services initialized
+[2026-03-26 00:59:52] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:00:34] [WARNING] Debug Mode: ON
+[2026-03-26 01:00:34] [INFO] Initializing MQTT client...
+[2026-03-26 01:00:34] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:00:34] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:00:34] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:00:35] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:00:35] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:00:35] [INFO] Initializing services...
+[2026-03-26 01:00:35] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:00:35] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:00:35] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:00:35] [SUCCESS] All services initialized
+[2026-03-26 01:00:35] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:01:15] [WARNING] Debug Mode: ON
+[2026-03-26 01:01:15] [INFO] Initializing MQTT client...
+[2026-03-26 01:01:15] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:01:15] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:01:15] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:01:16] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:01:16] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:01:16] [INFO] Initializing services...
+[2026-03-26 01:01:16] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:01:16] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:01:16] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:01:16] [SUCCESS] All services initialized
+[2026-03-26 01:01:16] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:02:34] [WARNING] Debug Mode: ON
+[2026-03-26 01:02:34] [INFO] Initializing MQTT client...
+[2026-03-26 01:02:34] [ERROR] ============================================================
+[2026-03-26 01:02:34] [ERROR] Startup Failed: 'Flask' object has no attribute 'condig'
+[2026-03-26 01:02:34] [ERROR] ============================================================
+[2026-03-26 01:02:48] [WARNING] Debug Mode: ON
+[2026-03-26 01:02:48] [INFO] Initializing MQTT client...
+[2026-03-26 01:02:48] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:02:48] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:02:48] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:02:50] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:02:50] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:02:50] [INFO] Initializing services...
+[2026-03-26 01:02:50] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:02:50] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:02:50] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:02:50] [SUCCESS] All services initialized
+[2026-03-26 01:02:50] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:03:48] [WARNING] Debug Mode: ON
+[2026-03-26 01:03:48] [INFO] Initializing MQTT client...
+[2026-03-26 01:03:48] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:03:48] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:03:49] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:03:49] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:03:49] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:03:49] [INFO] Initializing services...
+[2026-03-26 01:03:49] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:03:49] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:03:49] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:03:49] [SUCCESS] All services initialized
+[2026-03-26 01:03:50] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:04:20] [WARNING] Debug Mode: ON
+[2026-03-26 01:04:20] [INFO] Initializing MQTT client...
+[2026-03-26 01:04:20] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:04:20] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:04:20] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:04:21] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:04:21] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:04:21] [INFO] Initializing services...
+[2026-03-26 01:04:21] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:04:21] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:04:21] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:04:21] [SUCCESS] All services initialized
+[2026-03-26 01:04:21] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:04:55] [WARNING] Debug Mode: ON
+[2026-03-26 01:04:55] [INFO] Initializing MQTT client...
+[2026-03-26 01:04:55] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:04:55] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:04:55] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:04:56] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:04:56] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:04:56] [INFO] Initializing services...
+[2026-03-26 01:04:56] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:04:56] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:04:56] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:04:56] [SUCCESS] All services initialized
+[2026-03-26 01:04:56] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:05:27] [WARNING] Debug Mode: ON
+[2026-03-26 01:05:27] [INFO] Initializing MQTT client...
+[2026-03-26 01:05:27] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:05:27] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:05:27] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:05:28] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:05:28] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:05:28] [INFO] Initializing services...
+[2026-03-26 01:05:28] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:05:28] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:05:28] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:05:28] [SUCCESS] All services initialized
+[2026-03-26 01:05:28] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:06:17] [WARNING] Debug Mode: ON
+[2026-03-26 01:06:17] [INFO] Initializing MQTT client...
+[2026-03-26 01:06:17] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:06:17] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:06:18] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:06:18] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:06:18] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:06:18] [INFO] Initializing services...
+[2026-03-26 01:06:18] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:06:18] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:06:18] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:06:18] [SUCCESS] All services initialized
+[2026-03-26 01:06:19] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:07:07] [WARNING] Debug Mode: ON
+[2026-03-26 01:07:07] [INFO] Initializing MQTT client...
+[2026-03-26 01:07:07] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:07:07] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:07:07] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:07:08] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:07:08] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:07:08] [INFO] Initializing services...
+[2026-03-26 01:07:08] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:07:08] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:07:08] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:07:08] [SUCCESS] All services initialized
+[2026-03-26 01:07:08] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:07:37] [WARNING] Debug Mode: ON
+[2026-03-26 01:07:37] [INFO] Initializing MQTT client...
+[2026-03-26 01:07:37] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:07:37] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:07:37] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:07:43] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:07:43] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:07:43] [INFO] Initializing services...
+[2026-03-26 01:07:43] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:07:43] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:07:43] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:07:43] [SUCCESS] All services initialized
+[2026-03-26 01:07:43] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:09:28] [WARNING] Debug Mode: ON
+[2026-03-26 01:09:28] [INFO] Initializing MQTT client...
+[2026-03-26 01:09:28] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:09:28] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:09:28] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:09:34] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:09:34] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:09:34] [INFO] Initializing services...
+[2026-03-26 01:09:34] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:09:34] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:09:34] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:09:34] [SUCCESS] All services initialized
+[2026-03-26 01:09:35] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:09:57] [WARNING] Debug Mode: ON
+[2026-03-26 01:09:57] [INFO] Initializing MQTT client...
+[2026-03-26 01:09:57] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:09:57] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:09:57] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:09:58] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:09:58] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:09:58] [INFO] Initializing services...
+[2026-03-26 01:09:58] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:09:58] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:09:58] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:09:58] [SUCCESS] All services initialized
+[2026-03-26 01:09:58] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:10:28] [WARNING] Debug Mode: ON
+[2026-03-26 01:10:28] [INFO] Initializing MQTT client...
+[2026-03-26 01:10:28] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:10:28] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:10:28] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:10:29] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:10:29] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:10:29] [INFO] Initializing services...
+[2026-03-26 01:10:29] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:10:29] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:10:29] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:10:29] [SUCCESS] All services initialized
+[2026-03-26 01:10:29] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:10:56] [WARNING] Debug Mode: ON
+[2026-03-26 01:10:56] [INFO] Initializing MQTT client...
+[2026-03-26 01:10:56] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:10:56] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:10:56] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:10:57] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:10:57] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:10:57] [INFO] Initializing services...
+[2026-03-26 01:10:57] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:10:57] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:10:57] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:10:57] [SUCCESS] All services initialized
+[2026-03-26 01:10:57] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:14:07] [WARNING] Debug Mode: ON
+[2026-03-26 01:14:07] [INFO] Initializing MQTT client...
+[2026-03-26 01:14:07] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:14:07] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:14:07] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:14:08] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:14:08] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:14:08] [INFO] Initializing services...
+[2026-03-26 01:14:08] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:14:08] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:14:08] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:14:08] [SUCCESS] All services initialized
+[2026-03-26 01:14:09] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:14:42] [WARNING] Debug Mode: ON
+[2026-03-26 01:14:42] [INFO] Initializing MQTT client...
+[2026-03-26 01:14:42] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:14:42] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:14:42] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:14:43] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:14:43] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:14:43] [INFO] Initializing services...
+[2026-03-26 01:14:43] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:14:43] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:14:43] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:14:43] [SUCCESS] All services initialized
+[2026-03-26 01:14:43] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:22:49] [WARNING] Debug Mode: ON
+[2026-03-26 01:22:49] [INFO] Initializing MQTT client...
+[2026-03-26 01:22:49] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:22:49] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:22:49] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:22:50] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:22:50] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:22:50] [INFO] Initializing services...
+[2026-03-26 01:22:50] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:22:50] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:22:50] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:22:50] [SUCCESS] All services initialized
+[2026-03-26 01:22:50] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:23:24] [WARNING] Debug Mode: ON
+[2026-03-26 01:23:24] [INFO] Initializing MQTT client...
+[2026-03-26 01:23:24] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:23:24] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:23:24] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:23:25] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:23:25] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:23:25] [INFO] Initializing services...
+[2026-03-26 01:23:25] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:23:25] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:23:25] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:23:25] [SUCCESS] All services initialized
+[2026-03-26 01:23:25] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:26:07] [WARNING] Debug Mode: ON
+[2026-03-26 01:26:07] [INFO] Initializing MQTT client...
+[2026-03-26 01:26:07] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:26:07] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:26:07] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:26:08] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:26:08] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:26:08] [INFO] Initializing services...
+[2026-03-26 01:26:08] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:26:08] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:26:08] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:26:08] [SUCCESS] All services initialized
+[2026-03-26 01:26:08] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:26:21] [WARNING] Debug Mode: ON
+[2026-03-26 01:26:21] [INFO] Initializing MQTT client...
+[2026-03-26 01:26:21] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:26:21] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:26:21] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:26:22] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:26:22] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:26:22] [INFO] Initializing services...
+[2026-03-26 01:26:22] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:26:22] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:26:22] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:26:22] [SUCCESS] All services initialized
+[2026-03-26 01:26:22] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:26:26] [SUCCESS] Sensor data saved to DB [ID: 19] - ph: 4.9 pH
+[2026-03-26 01:26:26] [SUCCESS] MQTT data broadcasted via WebSocket: ph=4.9
+[2026-03-26 01:26:26] [INFO] Processed MQTT data: ph = 4.9 (from topic: sensors/ph)
+[2026-03-26 01:27:46] [WARNING] Debug Mode: ON
+[2026-03-26 01:27:46] [INFO] Initializing MQTT client...
+[2026-03-26 01:27:46] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:27:46] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:27:46] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:27:47] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:27:47] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:27:47] [INFO] Initializing services...
+[2026-03-26 01:27:47] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:27:47] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:27:47] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:27:47] [SUCCESS] All services initialized
+[2026-03-26 01:27:47] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:27:51] [SUCCESS] Sensor data saved to DB [ID: 20] - ph: 4.9 pH
+[2026-03-26 01:27:51] [SUCCESS] MQTT data broadcasted via WebSocket: ph=4.9
+[2026-03-26 01:27:51] [INFO] Processed MQTT data: ph = 4.9 (from topic: sensors/ph)
+[2026-03-26 01:28:13] [WARNING] Debug Mode: ON
+[2026-03-26 01:28:13] [INFO] Initializing MQTT client...
+[2026-03-26 01:28:13] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:28:13] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:28:13] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:28:14] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:28:14] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:28:14] [INFO] Initializing services...
+[2026-03-26 01:28:14] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:28:14] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:28:14] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:28:14] [SUCCESS] All services initialized
+[2026-03-26 01:28:14] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:28:16] [SUCCESS] Sensor data saved to DB [ID: 21] - ph: 4.9 pH
+[2026-03-26 01:28:16] [SUCCESS] MQTT data broadcasted via WebSocket: ph=4.9
+[2026-03-26 01:28:16] [INFO] Processed MQTT data: ph = 4.9 (from topic: sensors/ph)
+[2026-03-26 01:30:48] [WARNING] Debug Mode: ON
+[2026-03-26 01:30:48] [INFO] Initializing MQTT client...
+[2026-03-26 01:30:48] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:30:48] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:30:48] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:30:49] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:30:49] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:30:49] [INFO] Initializing services...
+[2026-03-26 01:30:49] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:30:49] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:30:49] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:30:49] [SUCCESS] All services initialized
+[2026-03-26 01:30:50] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:30:57] [SUCCESS] Sensor data saved to DB [ID: 22] - ph: 4.9 pH
+[2026-03-26 01:30:57] [SUCCESS] MQTT data broadcasted via WebSocket: ph=4.9
+[2026-03-26 01:30:57] [INFO] Processed MQTT data: ph = 4.9 (from topic: sensors/ph)
+[2026-03-26 01:31:26] [WARNING] Debug Mode: ON
+[2026-03-26 01:31:26] [INFO] Initializing MQTT client...
+[2026-03-26 01:31:26] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:31:26] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:31:26] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:31:27] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:31:27] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:31:27] [INFO] Initializing services...
+[2026-03-26 01:31:27] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:31:27] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:31:27] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:31:27] [SUCCESS] All services initialized
+[2026-03-26 01:31:27] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:32:06] [WARNING] Debug Mode: ON
+[2026-03-26 01:32:06] [INFO] Initializing MQTT client...
+[2026-03-26 01:32:06] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:32:06] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:32:06] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:32:07] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:32:07] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:32:07] [INFO] Initializing services...
+[2026-03-26 01:32:07] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:32:07] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:32:07] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:32:07] [SUCCESS] All services initialized
+[2026-03-26 01:32:07] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:37:37] [SUCCESS] Sensor data saved to DB [ID: 23] - ph: 6.7 pH
+[2026-03-26 01:37:37] [SUCCESS] MQTT data broadcasted via WebSocket: ph=6.7
+[2026-03-26 01:37:37] [INFO] Processed MQTT data: ph = 6.7 (from topic: sensors/ph)
+[2026-03-26 01:37:38] [ERROR] Error handling sensor request: Object of type datetime is not JSON serializable
+[2026-03-26 01:38:08] [SUCCESS] Sensor data saved to DB [ID: 24] - ph: 6.7 pH
+[2026-03-26 01:38:08] [SUCCESS] MQTT data broadcasted via WebSocket: ph=6.7
+[2026-03-26 01:38:08] [INFO] Processed MQTT data: ph = 6.7 (from topic: sensors/ph)
+[2026-03-26 01:43:45] [WARNING] Debug Mode: ON
+[2026-03-26 01:43:45] [INFO] Initializing MQTT client...
+[2026-03-26 01:43:45] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:43:45] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:43:45] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:43:46] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:43:46] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:43:46] [INFO] Initializing services...
+[2026-03-26 01:43:46] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 01:43:46] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 01:43:46] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 01:43:46] [SUCCESS] All services initialized
+[2026-03-26 01:43:47] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 01:49:58] [WARNING] Debug Mode: ON
+[2026-03-26 01:49:58] [INFO] Initializing MQTT client...
+[2026-03-26 01:49:58] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 01:49:58] [INFO] Setting up TLS for port 8883...
+[2026-03-26 01:49:58] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 01:49:59] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 01:49:59] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 01:49:59] [INFO] Initializing services...
+[2026-03-26 01:49:59] [ERROR] ============================================================
+[2026-03-26 01:49:59] [ERROR] Startup Failed: WebSocketService._register_handlers() missing 1 required positional argument: 'app'
+[2026-03-26 01:49:59] [ERROR] ============================================================
+[2026-03-26 02:01:11] [WARNING] Debug Mode: ON
+[2026-03-26 02:01:12] [INFO] Initializing MQTT client...
+[2026-03-26 02:01:12] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:01:12] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:01:12] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:01:13] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:01:13] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:01:13] [INFO] Initializing services...
+[2026-03-26 02:01:13] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:01:13] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:01:13] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:01:13] [SUCCESS] All services initialized
+[2026-03-26 02:01:13] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:01:30] [WARNING] Debug Mode: ON
+[2026-03-26 02:01:30] [INFO] Initializing MQTT client...
+[2026-03-26 02:01:30] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:01:30] [INFO] Connecting to MQTT broker None:None...
+[2026-03-26 02:01:30] [ERROR] Failed to start MQTT loop: Invalid host.
+[2026-03-26 02:01:30] [INFO] Retrying in 5 seconds...
+[2026-03-26 02:01:30] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:01:30] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:01:30] [INFO] Initializing services...
+[2026-03-26 02:01:30] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:01:30] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:01:30] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:01:30] [SUCCESS] All services initialized
+[2026-03-26 02:01:35] [INFO] Connecting to MQTT broker None:None...
+[2026-03-26 02:01:35] [ERROR] Failed to start MQTT loop: Invalid host.
+[2026-03-26 02:01:35] [INFO] Retrying in 10 seconds...
+[2026-03-26 02:01:45] [INFO] Connecting to MQTT broker None:None...
+[2026-03-26 02:01:45] [ERROR] Failed to start MQTT loop: Invalid host.
+[2026-03-26 02:01:45] [INFO] Retrying in 20 seconds...
+[2026-03-26 02:02:05] [INFO] Connecting to MQTT broker None:None...
+[2026-03-26 02:02:05] [ERROR] Failed to start MQTT loop: Invalid host.
+[2026-03-26 02:02:05] [INFO] Retrying in 40 seconds...
+[2026-03-26 02:02:45] [INFO] Connecting to MQTT broker None:None...
+[2026-03-26 02:02:45] [ERROR] Failed to start MQTT loop: Invalid host.
+[2026-03-26 02:02:45] [INFO] Retrying in 60 seconds...
+[2026-03-26 02:03:29] [WARNING] Debug Mode: ON
+[2026-03-26 02:03:29] [INFO] Initializing MQTT client...
+[2026-03-26 02:03:29] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:03:29] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:03:29] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:03:30] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:03:30] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:03:30] [INFO] Initializing services...
+[2026-03-26 02:03:30] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:03:30] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:03:30] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:03:30] [SUCCESS] All services initialized
+[2026-03-26 02:04:07] [WARNING] Debug Mode: ON
+[2026-03-26 02:04:07] [INFO] Initializing MQTT client...
+[2026-03-26 02:04:07] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:04:07] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:04:07] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:04:08] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:04:08] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:04:08] [INFO] Initializing services...
+[2026-03-26 02:04:08] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:04:08] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:04:08] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:04:08] [SUCCESS] All services initialized
+[2026-03-26 02:05:15] [WARNING] Debug Mode: ON
+[2026-03-26 02:05:15] [INFO] Initializing MQTT client...
+[2026-03-26 02:05:15] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:05:15] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:05:15] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:05:16] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:05:16] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:05:16] [INFO] Initializing services...
+[2026-03-26 02:05:16] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:05:16] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:05:16] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:05:16] [SUCCESS] All services initialized
+[2026-03-26 02:05:53] [WARNING] Debug Mode: ON
+[2026-03-26 02:05:54] [INFO] Initializing MQTT client...
+[2026-03-26 02:05:54] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:05:54] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:05:54] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:05:54] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:05:54] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:05:54] [INFO] Initializing services...
+[2026-03-26 02:05:54] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:05:54] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:05:54] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:05:54] [SUCCESS] All services initialized
+[2026-03-26 02:06:17] [WARNING] Debug Mode: ON
+[2026-03-26 02:06:17] [INFO] Initializing MQTT client...
+[2026-03-26 02:06:17] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:06:17] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:06:17] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:06:18] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:06:18] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:06:18] [INFO] Initializing services...
+[2026-03-26 02:06:18] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:06:18] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:06:18] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:06:18] [SUCCESS] All services initialized
+[2026-03-26 02:07:16] [WARNING] Debug Mode: ON
+[2026-03-26 02:07:17] [INFO] Initializing MQTT client...
+[2026-03-26 02:07:17] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:07:17] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:07:17] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:07:17] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:07:17] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:07:17] [INFO] Initializing services...
+[2026-03-26 02:07:17] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:07:17] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:07:17] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:07:17] [SUCCESS] All services initialized
+[2026-03-26 02:10:08] [WARNING] Debug Mode: ON
+[2026-03-26 02:10:09] [INFO] Initializing MQTT client...
+[2026-03-26 02:10:09] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:10:09] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:10:09] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:10:10] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:10:10] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:10:10] [INFO] Initializing services...
+[2026-03-26 02:10:10] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:10:10] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:10:10] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:10:10] [SUCCESS] All services initialized
+[2026-03-26 02:11:39] [WARNING] Debug Mode: ON
+[2026-03-26 02:11:40] [INFO] Initializing MQTT client...
+[2026-03-26 02:11:40] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:11:40] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:11:40] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:11:46] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:11:46] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:11:46] [INFO] Initializing services...
+[2026-03-26 02:11:46] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:11:46] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:11:46] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:11:46] [SUCCESS] All services initialized
+[2026-03-26 02:14:09] [WARNING] Debug Mode: ON
+[2026-03-26 02:14:10] [INFO] Initializing MQTT client...
+[2026-03-26 02:14:10] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:14:10] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:14:10] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:14:12] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:14:12] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:14:12] [INFO] Initializing services...
+[2026-03-26 02:14:12] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:14:12] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:14:12] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:14:12] [SUCCESS] All services initialized
+[2026-03-26 02:14:30] [WARNING] Debug Mode: ON
+[2026-03-26 02:14:30] [INFO] Initializing MQTT client...
+[2026-03-26 02:14:30] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:14:30] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:14:30] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:14:31] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:14:31] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:14:31] [INFO] Initializing services...
+[2026-03-26 02:14:31] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:14:31] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:14:31] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:14:31] [SUCCESS] All services initialized
+[2026-03-26 02:14:46] [WARNING] Debug Mode: ON
+[2026-03-26 02:14:47] [INFO] Initializing MQTT client...
+[2026-03-26 02:14:47] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:14:47] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:14:47] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:14:47] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:14:47] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:14:47] [INFO] Initializing services...
+[2026-03-26 02:14:47] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:14:47] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:14:47] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:14:47] [SUCCESS] All services initialized
+[2026-03-26 02:14:48] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:14:54] [WARNING] Debug Mode: ON
+[2026-03-26 02:14:54] [INFO] Initializing MQTT client...
+[2026-03-26 02:14:54] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:14:54] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:14:54] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:14:55] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:14:55] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:14:55] [INFO] Initializing services...
+[2026-03-26 02:14:55] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:14:55] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:14:55] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:14:55] [SUCCESS] All services initialized
+[2026-03-26 02:14:55] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:15:32] [WARNING] Debug Mode: ON
+[2026-03-26 02:15:33] [INFO] Initializing MQTT client...
+[2026-03-26 02:15:33] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:15:33] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:15:33] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:15:34] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:15:34] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:15:34] [INFO] Initializing services...
+[2026-03-26 02:15:34] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:15:34] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:15:34] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:15:34] [SUCCESS] All services initialized
+[2026-03-26 02:15:34] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:17:39] [INFO] Processed MQTT data: json = None (from topic: sensors/json)
+[2026-03-26 02:17:52] [ERROR] Error handling sensor request: Object of type datetime is not JSON serializable
+[2026-03-26 02:18:09] [127.0.0.1] GET /dashboard/ | 200 | 0.426s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.509s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/img/user.png | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.535s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/js/adminlte.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:09] [127.0.0.1] GET /static/js/customize.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.592s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | 0.609s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.635s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.641s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:18:10] [ERROR] Error handling sensor request: Object of type datetime is not JSON serializable
+[2026-03-26 02:18:10] [127.0.0.1] GET /static/img/favicon/favicon.ico | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:37:30] [ERROR] Error handling sensor request: Object of type datetime is not JSON serializable
+[2026-03-26 02:37:51] [SUCCESS] Sensor data saved to DB [ID: 25] - ph: 5.7 pH
+[2026-03-26 02:37:51] [SUCCESS] MQTT data broadcasted via WebSocket: ph=5.7
+[2026-03-26 02:37:51] [INFO] Processed MQTT data: ph = 5.7 (from topic: sensors/ph)
+[2026-03-26 02:38:04] [ERROR] 404: /.well-known/appspecific/com.chrome.devtools.json
+[2026-03-26 02:38:04] [127.0.0.1] GET /.well-known/appspecific/com.chrome.devtools.json | 404 | 0.019s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.026s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.008s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.014s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /dashboard/ | 200 | 0.038s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | 0.007s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js.map | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/js/adminlte.js.map | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:38:04] [127.0.0.1] GET /static/css/adminlte.min.css.map | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:40:45] [WARNING] Debug Mode: ON
+[2026-03-26 02:40:46] [INFO] Initializing MQTT client...
+[2026-03-26 02:40:46] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:40:46] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:40:46] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:40:47] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:40:47] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:40:47] [INFO] Initializing services...
+[2026-03-26 02:40:47] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:40:47] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:40:47] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:40:47] [SUCCESS] All services initialized
+[2026-03-26 02:40:47] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:41:00] [SUCCESS] Sensor data saved to DB [ID: 26] - ph: 7.7 pH
+[2026-03-26 02:41:00] [SUCCESS] MQTT data broadcasted via WebSocket: ph=7.7
+[2026-03-26 02:41:00] [INFO] Processed MQTT data: ph = 7.7 (from topic: sensors/ph)
+[2026-03-26 02:43:23] [ERROR] 404: /.well-known/appspecific/com.chrome.devtools.json
+[2026-03-26 02:43:23] [127.0.0.1] GET /.well-known/appspecific/com.chrome.devtools.json | 404 | 0.011s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:43:23] [127.0.0.1] GET /static/css/adminlte.min.css.map | 304 | 0.347s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:43:23] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js.map | 304 | 0.356s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:43:23] [127.0.0.1] GET /static/js/adminlte.js.map | 304 | 0.355s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 02:45:05] [WARNING] Debug Mode: ON
+[2026-03-26 02:45:06] [INFO] Initializing MQTT client...
+[2026-03-26 02:45:06] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:45:06] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:45:06] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:45:07] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:45:07] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:45:07] [INFO] Initializing services...
+[2026-03-26 02:45:07] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:45:07] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:45:07] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:45:07] [SUCCESS] All services initialized
+[2026-03-26 02:45:07] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:45:10] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:45:45] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:45:51] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:46:07] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:46:21] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:46:27] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:46:28] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:46:44] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:48:11] [WARNING] Debug Mode: ON
+[2026-03-26 02:48:11] [INFO] Initializing MQTT client...
+[2026-03-26 02:48:11] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:48:11] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:48:11] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:48:12] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:48:12] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:48:12] [INFO] Initializing services...
+[2026-03-26 02:48:12] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:48:12] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:48:12] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:48:12] [SUCCESS] All services initialized
+[2026-03-26 02:48:12] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:48:16] [INFO] Processed MQTT data: json = None (from topic: sensors/json)
+[2026-03-26 02:48:33] [WARNING] Debug Mode: ON
+[2026-03-26 02:48:33] [INFO] Initializing MQTT client...
+[2026-03-26 02:48:33] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:48:33] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:48:33] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:48:34] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:48:34] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:48:34] [INFO] Initializing services...
+[2026-03-26 02:48:34] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:48:34] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:48:34] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:48:34] [SUCCESS] All services initialized
+[2026-03-26 02:48:34] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:48:37] [ERROR] Error processing message: too many values to unpack (expected 2)
+[2026-03-26 02:48:54] [WARNING] Debug Mode: ON
+[2026-03-26 02:48:55] [INFO] Initializing MQTT client...
+[2026-03-26 02:48:55] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:48:55] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:48:55] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:48:56] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:48:56] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:48:56] [INFO] Initializing services...
+[2026-03-26 02:48:56] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:48:56] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:48:56] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:48:56] [SUCCESS] All services initialized
+[2026-03-26 02:48:56] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:48:59] [ERROR] Error processing message: 'str' object has no attribute 'value'
+[2026-03-26 02:54:08] [WARNING] Debug Mode: ON
+[2026-03-26 02:54:08] [INFO] Initializing MQTT client...
+[2026-03-26 02:54:08] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 02:54:08] [INFO] Setting up TLS for port 8883...
+[2026-03-26 02:54:09] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 02:54:10] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 02:54:10] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 02:54:10] [INFO] Initializing services...
+[2026-03-26 02:54:10] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 02:54:10] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 02:54:10] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 02:54:10] [SUCCESS] All services initialized
+[2026-03-26 02:54:10] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 02:54:14] [SUCCESS] Sensor data saved to DB [ID: 27] - json: 6.8 
+[2026-03-26 02:54:14] [INFO] Processed MQTT data: json = 6.8 (from topic: sensors/json)
+[2026-03-26 02:55:26] [SUCCESS] Sensor data saved to DB [ID: 28] - json: 6.8 
+[2026-03-26 02:55:26] [INFO] Processed MQTT data: json = 6.8 (from topic: sensors/json)
+[2026-03-26 03:01:16] [WARNING] Debug Mode: ON
+[2026-03-26 03:01:17] [INFO] Initializing MQTT client...
+[2026-03-26 03:01:17] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:01:17] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:01:17] [ERROR] ============================================================
+[2026-03-26 03:01:17] [ERROR] Startup Failed: 'MQTTClient' object has no attribute '_on_message'
+[2026-03-26 03:01:17] [ERROR] ============================================================
+[2026-03-26 03:01:48] [WARNING] Debug Mode: ON
+[2026-03-26 03:01:48] [INFO] Initializing MQTT client...
+[2026-03-26 03:01:48] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:01:48] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:01:48] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:01:49] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:01:49] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:01:49] [INFO] Initializing services...
+[2026-03-26 03:01:49] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:01:49] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:01:49] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:01:49] [SUCCESS] All services initialized
+[2026-03-26 03:01:50] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:01:55] [ERROR] Failed to save temperature: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:01:55] [ERROR] Failed to save humidity: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:01:55] [ERROR] Failed to save tds: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:01:55] [ERROR] Failed to save ph: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:01:55] [INFO] Processed 4 sensors from device json (topic: sensors/json)
+[2026-03-26 03:03:04] [ERROR] Failed to save temperature: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:03:04] [ERROR] Failed to save humidity: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:03:04] [ERROR] Failed to save tds: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:03:04] [ERROR] Failed to save ph: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:03:04] [INFO] Processed 4 sensors from device json (topic: sensors/json)
+[2026-03-26 03:04:40] [WARNING] Debug Mode: ON
+[2026-03-26 03:04:40] [INFO] Initializing MQTT client...
+[2026-03-26 03:04:40] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:04:40] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:04:41] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:04:41] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:04:41] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:04:41] [INFO] Initializing services...
+[2026-03-26 03:04:41] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:04:41] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:04:41] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:04:41] [SUCCESS] All services initialized
+[2026-03-26 03:04:42] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:04:50] [ERROR] Failed to save temperature: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:04:50] [ERROR] Failed to save humidity: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:04:50] [ERROR] Failed to save tds: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:04:50] [ERROR] Failed to save ph: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'device_id'
+[2026-03-26 03:04:50] [INFO] Processed 4 sensors from device unknown (topic: unknown)
+[2026-03-26 03:05:13] [WARNING] Debug Mode: ON
+[2026-03-26 03:05:13] [INFO] Initializing MQTT client...
+[2026-03-26 03:05:13] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:05:13] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:05:13] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:05:14] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:05:14] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:05:14] [INFO] Initializing services...
+[2026-03-26 03:05:14] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:05:14] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:05:14] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:05:14] [SUCCESS] All services initialized
+[2026-03-26 03:05:14] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:09:23] [WARNING] Debug Mode: ON
+[2026-03-26 03:09:23] [INFO] Initializing MQTT client...
+[2026-03-26 03:09:23] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:09:23] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:09:24] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:09:25] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:09:25] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:09:25] [INFO] Initializing services...
+[2026-03-26 03:09:25] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:09:25] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:09:25] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:09:25] [SUCCESS] All services initialized
+[2026-03-26 03:09:25] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:09:27] [ERROR] Failed to save temperature: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'timestamp'
+[2026-03-26 03:09:27] [ERROR] Failed to save humidity: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'timestamp'
+[2026-03-26 03:09:27] [ERROR] Failed to save tds: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'timestamp'
+[2026-03-26 03:09:27] [ERROR] Failed to save ph: SensorDataModel.save_sensor_data() got an unexpected keyword argument 'timestamp'
+[2026-03-26 03:09:27] [ERROR] Failed to broadcast: WebSocketService.on_mqtt_message_received() missing 1 required positional argument: 'payload'
+[2026-03-26 03:09:27] [INFO] Processed 4 sensors (timestamp: 2026-03-26T03:09:27.920975)
+[2026-03-26 03:10:14] [WARNING] Debug Mode: ON
+[2026-03-26 03:10:15] [INFO] Initializing MQTT client...
+[2026-03-26 03:10:15] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:10:15] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:10:15] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:10:15] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:10:15] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:10:15] [INFO] Initializing services...
+[2026-03-26 03:10:15] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:10:15] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:10:15] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:10:15] [SUCCESS] All services initialized
+[2026-03-26 03:10:16] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:10:40] [ERROR] Failed to broadcast: WebSocketService.on_mqtt_message_received() missing 1 required positional argument: 'payload'
+[2026-03-26 03:10:40] [INFO] Processed 4 sensors (timestamp: 2026-03-26T03:10:40.230101)
+[2026-03-26 03:16:40] [WARNING] Debug Mode: ON
+[2026-03-26 03:16:41] [INFO] Initializing MQTT client...
+[2026-03-26 03:16:41] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:16:41] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:16:41] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:16:42] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:16:42] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:16:42] [INFO] Initializing services...
+[2026-03-26 03:16:42] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:16:42] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:16:42] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:16:42] [SUCCESS] All services initialized
+[2026-03-26 03:16:43] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:23:12] [WARNING] Debug Mode: ON
+[2026-03-26 03:23:14] [INFO] Initializing MQTT client...
+[2026-03-26 03:23:14] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:23:14] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:23:14] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:23:15] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:23:15] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:23:15] [INFO] Initializing services...
+[2026-03-26 03:23:15] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:23:15] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:23:15] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:23:15] [SUCCESS] All services initialized
+[2026-03-26 03:23:15] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:23:21] [SUCCESS] MQTT data broadcasted via WebSocket: temperature=25.5
+[2026-03-26 03:23:21] [SUCCESS] MQTT data broadcasted via WebSocket: humidity=68.2
+[2026-03-26 03:23:21] [SUCCESS] MQTT data broadcasted via WebSocket: tds=850
+[2026-03-26 03:23:21] [SUCCESS] MQTT data broadcasted via WebSocket: ph=6.8
+[2026-03-26 03:25:30] [WARNING] Debug Mode: ON
+[2026-03-26 03:25:30] [INFO] Initializing MQTT client...
+[2026-03-26 03:25:30] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:25:30] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:25:30] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:25:36] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:25:36] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:25:36] [INFO] Initializing services...
+[2026-03-26 03:25:36] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:25:36] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:25:36] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:25:36] [SUCCESS] All services initialized
+[2026-03-26 03:25:37] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:28:24] [WARNING] Debug Mode: ON
+[2026-03-26 03:28:25] [INFO] Initializing MQTT client...
+[2026-03-26 03:28:25] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:28:25] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:28:25] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:28:26] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:28:26] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:28:26] [INFO] Initializing services...
+[2026-03-26 03:28:26] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:28:26] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:28:26] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:28:26] [SUCCESS] All services initialized
+[2026-03-26 03:28:26] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:29:30] [127.0.0.1] GET /dashboard/ | 200 | 2.487s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:30] [ERROR] 404: /.well-known/appspecific/com.chrome.devtools.json
+[2026-03-26 03:29:30] [127.0.0.1] GET /.well-known/appspecific/com.chrome.devtools.json | 404 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/css/adminlte.min.css | 304 | 0.548s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/img/user.png | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/img/title_robotik.svg | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/js/adminlte.js | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/jquery-mousewheel/jquery.mousewheel.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/jquery/jquery.min.js | 304 | 0.603s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/raphael/raphael.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/jquery-mapael/jquery.mapael.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/jquery-mapael/maps/usa_states.min.js | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/fontawesome-free/css/all.min.css | 304 | 0.623s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/chart.js/Chart.min.js | 304 | 0.003s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css | 304 | 0.642s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/js/customize.js | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/img/favicon/site.webmanifest | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/css/preloader.css | 304 | 0.646s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/img/robotik_icon.png | 304 | 0.647s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/fonts/Ariblk.ttf | 304 | 0.002s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/css/adminlte.min.css.map | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js.map | 304 | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:31] [127.0.0.1] GET /static/js/adminlte.js.map | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:32] [127.0.0.1] GET /static/img/favicon/favicon.ico | 304 | 0.001s | Device: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+[2026-03-26 03:29:38] [ERROR] WebSocket broadcast error: 'WebSocketService' object has no attribute 'broadcast_sensor_data_bulk'
+[2026-03-26 03:31:22] [WARNING] Debug Mode: ON
+[2026-03-26 03:31:23] [INFO] Initializing MQTT client...
+[2026-03-26 03:31:23] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:31:23] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:31:23] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:31:24] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:31:24] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:31:24] [INFO] Initializing services...
+[2026-03-26 03:31:24] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:31:24] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:31:24] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:31:24] [SUCCESS] All services initialized
+[2026-03-26 03:31:24] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:31:27] [ERROR] WebSocket broadcast error: WebSocketService.broadcast_sensor_data() got an unexpected keyword argument 'sensors'
+[2026-03-26 03:32:40] [WARNING] Debug Mode: ON
+[2026-03-26 03:32:40] [INFO] Initializing MQTT client...
+[2026-03-26 03:32:40] [INFO] MQTT credentials set for user: server-web
+[2026-03-26 03:32:40] [INFO] Setting up TLS for port 8883...
+[2026-03-26 03:32:40] [INFO] Connecting to MQTT broker 455deb9c48264079950c3ca46cec32f0.s1.eu.hivemq.cloud:8883...
+[2026-03-26 03:32:41] [SUCCESS] MQTT Client linked to WebSocket Service
+[2026-03-26 03:32:41] [SUCCESS] MQTT and WebSocket integration initialized
+[2026-03-26 03:32:41] [INFO] Initializing services...
+[2026-03-26 03:32:41] [SUCCESS] WebSocketIO Service initialized
+[2026-03-26 03:32:41] [INFO] ENABLE_SIMULATION = False (type: <class 'bool'>)
+[2026-03-26 03:32:41] [INFO] Simulasi data random TIDAK dimulai
+[2026-03-26 03:32:41] [SUCCESS] All services initialized
+[2026-03-26 03:32:41] [SUCCESS] Subscribed to topic: sensors/+
+[2026-03-26 03:32:47] [SUCCESS] Bulk data sent: 4 sensors
+[2026-03-26 03:32:47] [SUCCESS] MQTT bulk data broadcasted: {'temperature': {'value': 25.5, 'unit': None, 'timestamp': '2026-03-26T03:32:47.074487'}, 'humidity': {'value': 68.2, 'unit': None, 'timestamp': '2026-03-26T03:32:47.074487'}, 'tds': {'value': 850.0, 'unit': None, 'timestamp': '2026-03-26T03:32:47.074487'}, 'ph': {'value': 6.8, 'unit': None, 'timestamp': '2026-03-26T03:32:47.074487'}}
+[2026-03-26 03:33:30] [SUCCESS] Bulk data sent: 4 sensors
+[2026-03-26 03:33:30] [SUCCESS] MQTT bulk data broadcasted: {'temperature': {'value': 30.5, 'unit': None, 'timestamp': '2026-03-26T03:33:30.416383'}, 'humidity': {'value': 56.2, 'unit': None, 'timestamp': '2026-03-26T03:33:30.416383'}, 'tds': {'value': 700.0, 'unit': None, 'timestamp': '2026-03-26T03:33:30.416383'}, 'ph': {'value': 7.1, 'unit': None, 'timestamp': '2026-03-26T03:33:30.416383'}}
